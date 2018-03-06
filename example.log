@@ -1,0 +1,197 @@
+DEBUG main org.hibernate.loader.plan.exec.internal.LoadQueryJoinAndFetchProcessor - processing queryspace <gen:0>
+DEBUG main org.hibernate.loader.plan.build.spi.LoadPlanTreePrinter - LoadPlan(entity=br.com.springmvc.model.Departamento)
+    - Returns
+       - EntityReturnImpl(entity=br.com.springmvc.model.Departamento, querySpaceUid=<gen:0>, path=br.com.springmvc.model.Departamento)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=br.com.springmvc.model.Departamento)
+          - SQL table alias mapping - departamen0_
+          - alias suffix - 0_
+          - suffixed key columns - {COD_DEPARTAMENTO1_0_0_}
+
+DEBUG main org.hibernate.loader.entity.plan.EntityLoader - Static select for entity br.com.springmvc.model.Departamento [OPTIMISTIC_FORCE_INCREMENT]: select departamen0_.COD_DEPARTAMENTO as COD_DEPARTAMENTO1_0_0_, departamen0_.LOCALIZACAO_DEPARTAMENTO as LOCALIZACAO_DEPART2_0_0_, departamen0_.NOME_DEPARTAMENTO as NOME_DEPARTAMENTO3_0_0_ from DEPARTAMENTO departamen0_ where departamen0_.COD_DEPARTAMENTO=?
+DEBUG main org.hibernate.loader.Loader - Static select for action ACTION_MERGE on entity br.com.springmvc.model.Departamento: select departamen0_.COD_DEPARTAMENTO as COD_DEPARTAMENTO1_0_0_, departamen0_.LOCALIZACAO_DEPARTAMENTO as LOCALIZACAO_DEPART2_0_0_, departamen0_.NOME_DEPARTAMENTO as NOME_DEPARTAMENTO3_0_0_ from DEPARTAMENTO departamen0_ where departamen0_.COD_DEPARTAMENTO=?
+DEBUG main org.hibernate.loader.Loader - Static select for action ACTION_REFRESH on entity br.com.springmvc.model.Departamento: select departamen0_.COD_DEPARTAMENTO as COD_DEPARTAMENTO1_0_0_, departamen0_.LOCALIZACAO_DEPARTAMENTO as LOCALIZACAO_DEPART2_0_0_, departamen0_.NOME_DEPARTAMENTO as NOME_DEPARTAMENTO3_0_0_ from DEPARTAMENTO departamen0_ where departamen0_.COD_DEPARTAMENTO=?
+DEBUG main org.springframework.jdbc.datasource.DriverManagerDataSource - Creating new JDBC DriverManager Connection to [jdbc:oracle:thin:@localhost:1521:xe]
+DEBUG main org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator - No actions specified; doing nothing
+DEBUG main org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - No JtaPlatform was specified, checking resolver
+DEBUG main org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformResolverInitiator - No JtaPlatformResolver was specified, using default [org.hibernate.engine.transaction.jta.platform.internal.StandardJtaPlatformResolver]
+DEBUG main org.hibernate.engine.transaction.jta.platform.internal.StandardJtaPlatformResolver - Could not resolve JtaPlatform, using default [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+DEBUG main org.hibernate.query.spi.NamedQueryRepository - Checking 0 named HQL queries
+DEBUG main org.hibernate.query.spi.NamedQueryRepository - Checking 0 named SQL queries
+DEBUG main org.hibernate.internal.SessionFactoryRegistry - Initializing SessionFactoryRegistry : org.hibernate.internal.SessionFactoryRegistry@66273da0
+DEBUG main org.hibernate.internal.SessionFactoryRegistry - Registering SessionFactory: 46654ab2-4102-4ad2-82d7-2ffdba7e5aa9 (<unnamed>)
+DEBUG main org.hibernate.internal.SessionFactoryRegistry - Not binding SessionFactory to JNDI, no JNDI name configured
+DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Finished creating instance of bean 'sessionFactory'
+DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+DEBUG main org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor - Autowiring by type from bean name 'departamentoDaoImpl' to bean named 'sessionFactory'
+DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+DEBUG main org.springframework.transaction.annotation.AnnotationTransactionAttributeSource - Adding transactional method 'br.com.springmvc.dao.DepartamentoDaoImpl.listarDepartamentos' with attribute: PROPAGATION_REQUIRED,ISOLATION_DEFAULT; ''
+DEBUG main org.springframework.aop.framework.autoproxy.InfrastructureAdvisorAutoProxyCreator - Creating implicit proxy for bean 'departamentoDaoImpl' with 0 common interceptors and 1 specific interceptors
+DEBUG main org.springframework.aop.framework.JdkDynamicAopProxy - Creating JDK dynamic proxy: target source is SingletonTargetSource for target object [br.com.springmvc.dao.DepartamentoDaoImpl@80bfdc6]
+DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Finished creating instance of bean 'departamentoDaoImpl'
+DEBUG main org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor - Autowiring by type from bean name 'departamentoBusinessImpl' to bean named 'departamentoDaoImpl'
+DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+DEBUG main org.springframework.transaction.annotation.AnnotationTransactionAttributeSource - Adding transactional method 'br.com.springmvc.business.DepartamentoBusinessImpl.listarDepartamentos' with attribute: PROPAGATION_REQUIRED,ISOLATION_DEFAULT; ''
+DEBUG main org.springframework.aop.framework.autoproxy.InfrastructureAdvisorAutoProxyCreator - Creating implicit proxy for bean 'departamentoBusinessImpl' with 0 common interceptors and 1 specific interceptors
+DEBUG main org.springframework.aop.framework.JdkDynamicAopProxy - Creating JDK dynamic proxy: target source is SingletonTargetSource for target object [br.com.springmvc.business.DepartamentoBusinessImpl@646c0a67]
+DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Finished creating instance of bean 'departamentoBusinessImpl'
+DEBUG main org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor - Autowiring by type from bean name 'departamentoController' to bean named 'departamentoBusinessImpl'
+DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Finished creating instance of bean 'departamentoController'
+DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'departamentoBusinessImpl'
+DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'departamentoDaoImpl'
+DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration'
+DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'transactionAttributeSource'
+DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'transactionInterceptor'
+DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.transaction.config.internalTransactionalEventListenerFactory'
+DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating instance of bean 'org.springframework.transaction.config.internalTransactionalEventListenerFactory'
+DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration'
+DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Eagerly caching bean 'org.springframework.transaction.config.internalTransactionalEventListenerFactory' to allow for resolving potential circular references
+DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Finished creating instance of bean 'org.springframework.transaction.config.internalTransactionalEventListenerFactory'
+DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'sessionFactory'
+DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'dataSource'
+DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'transactionManager'
+DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating instance of bean 'transactionManager'
+DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'applicationConfig'
+DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'sessionFactory'
+DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Autowiring by type from bean name 'transactionManager' via factory method to bean named 'sessionFactory'
+DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Eagerly caching bean 'transactionManager' to allow for resolving potential circular references
+DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Invoking afterPropertiesSet() on bean with name 'transactionManager'
+INFO main org.springframework.orm.hibernate5.HibernateTransactionManager - Using DataSource [org.springframework.jdbc.datasource.DriverManagerDataSource@f627d13] of Hibernate SessionFactory for HibernateTransactionManager
+DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Finished creating instance of bean 'transactionManager'
+DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'org.springframework.aop.config.internalAutoProxyCreator'
+DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'org.springframework.context.event.internalEventListenerFactory'
+DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionalEventListenerFactory'
+DEBUG main org.springframework.context.annotation.AnnotationConfigApplicationContext - Unable to locate LifecycleProcessor with name 'lifecycleProcessor': using default [org.springframework.context.support.DefaultLifecycleProcessor@7724704f]
+DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'lifecycleProcessor'
+DEBUG main org.springframework.core.env.PropertySourcesPropertyResolver - Could not find key 'spring.liveBeansView.mbeanDomain' in any property source
+DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'departamentoBusinessImpl'
+DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'transactionManager'
+DEBUG main org.springframework.orm.hibernate5.HibernateTransactionManager - Creating new transaction with name [br.com.springmvc.business.DepartamentoBusinessImpl.listarDepartamentos]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT; ''
+DEBUG main org.hibernate.stat.internal.StatisticsInitiator - Statistics initialized [enabled=false]
+DEBUG main org.springframework.orm.hibernate5.HibernateTransactionManager - Opened new Session [SessionImpl(PersistenceContext[entityKeys=[],collectionKeys=[]];ActionQueue[insertions=ExecutableList{size=0} updates=ExecutableList{size=0} deletions=ExecutableList{size=0} orphanRemovals=ExecutableList{size=0} collectionCreations=ExecutableList{size=0} collectionRemovals=ExecutableList{size=0} collectionUpdates=ExecutableList{size=0} collectionQueuedOps=ExecutableList{size=0} unresolvedInsertDependencies=null])] for Hibernate transaction
+DEBUG main org.springframework.orm.hibernate5.HibernateTransactionManager - Preparing JDBC Connection of Hibernate Session [SessionImpl(PersistenceContext[entityKeys=[],collectionKeys=[]];ActionQueue[insertions=ExecutableList{size=0} updates=ExecutableList{size=0} deletions=ExecutableList{size=0} orphanRemovals=ExecutableList{size=0} collectionCreations=ExecutableList{size=0} collectionRemovals=ExecutableList{size=0} collectionUpdates=ExecutableList{size=0} collectionQueuedOps=ExecutableList{size=0} unresolvedInsertDependencies=null])]
+DEBUG main org.springframework.jdbc.datasource.DriverManagerDataSource - Creating new JDBC DriverManager Connection to [jdbc:oracle:thin:@localhost:1521:xe]
+DEBUG main org.hibernate.engine.transaction.internal.TransactionImpl - begin
+DEBUG main org.springframework.orm.hibernate5.HibernateTransactionManager - Exposing Hibernate transaction as JDBC transaction [oracle.jdbc.driver.T4CConnection@3f736a16]
+DEBUG main org.springframework.orm.hibernate5.HibernateTransactionManager - Found thread-bound Session [SessionImpl(PersistenceContext[entityKeys=[],collectionKeys=[]];ActionQueue[insertions=ExecutableList{size=0} updates=ExecutableList{size=0} deletions=ExecutableList{size=0} orphanRemovals=ExecutableList{size=0} collectionCreations=ExecutableList{size=0} collectionRemovals=ExecutableList{size=0} collectionUpdates=ExecutableList{size=0} collectionQueuedOps=ExecutableList{size=0} unresolvedInsertDependencies=null])] for Hibernate transaction
+DEBUG main org.springframework.orm.hibernate5.HibernateTransactionManager - Participating in existing transaction
+DEBUG main org.hibernate.hql.internal.QueryTranslatorFactoryInitiator - QueryTranslatorFactory : org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory@d613308
+INFO main org.hibernate.hql.internal.QueryTranslatorFactoryInitiator - HHH000397: Using ASTQueryTranslatorFactory
+DEBUG main org.hibernate.hql.internal.ast.QueryTranslatorImpl - parse() - HQL: from br.com.springmvc.model.Departamento order by codDepartamento
+DEBUG main org.hibernate.hql.internal.ast.QueryTranslatorImpl - --- HQL AST ---
+ \-[QUERY] Node: 'query'
+    +-[SELECT_FROM] Node: 'SELECT_FROM'
+    |  \-[FROM] Node: 'from'
+    |     \-[RANGE] Node: 'RANGE'
+    |        \-[DOT] Node: '.'
+    |           +-[DOT] Node: '.'
+    |           |  +-[DOT] Node: '.'
+    |           |  |  +-[DOT] Node: '.'
+    |           |  |  |  +-[IDENT] Node: 'br'
+    |           |  |  |  \-[IDENT] Node: 'com'
+    |           |  |  \-[IDENT] Node: 'springmvc'
+    |           |  \-[IDENT] Node: 'model'
+    |           \-[IDENT] Node: 'Departamento'
+    \-[ORDER] Node: 'order'
+       \-[IDENT] Node: 'codDepartamento'
+
+DEBUG main org.hibernate.hql.internal.ast.ErrorCounter - throwQueryException() : no errors
+DEBUG main org.hibernate.hql.internal.antlr.HqlSqlBaseWalker - select << begin [level=1, statement=select]
+DEBUG main org.hibernate.hql.internal.ast.tree.FromElement - FromClause{level=1} : br.com.springmvc.model.Departamento (<no alias>) -> departamen0_
+DEBUG main org.hibernate.hql.internal.ast.tree.FromReferenceNode - Resolved : {synthetic-alias} -> {synthetic-alias}
+DEBUG main org.hibernate.hql.internal.ast.tree.DotNode - getDataType() : codDepartamento -> org.hibernate.type.LongType@1cbf6e72
+DEBUG main org.hibernate.hql.internal.ast.tree.FromReferenceNode - Resolved : {synthetic-alias}.codDepartamento -> departamen0_.COD_DEPARTAMENTO
+DEBUG main org.hibernate.hql.internal.antlr.HqlSqlBaseWalker - select : finishing up [level=1, statement=select]
+DEBUG main org.hibernate.hql.internal.ast.HqlSqlWalker - processQuery() :  ( SELECT ( FromClause{level=1} DEPARTAMENTO departamen0_ ) ( order ( departamen0_.COD_DEPARTAMENTO {synthetic-alias} codDepartamento ) ) )
+DEBUG main org.hibernate.hql.internal.ast.HqlSqlWalker - Derived SELECT clause created.
+DEBUG main org.hibernate.hql.internal.ast.util.JoinProcessor - Using FROM fragment [DEPARTAMENTO departamen0_]
+DEBUG main org.hibernate.hql.internal.antlr.HqlSqlBaseWalker - select >> end [level=1, statement=select]
+DEBUG main org.hibernate.hql.internal.ast.QueryTranslatorImpl - --- SQL AST ---
+ \-[SELECT] QueryNode: 'SELECT'  querySpaces (DEPARTAMENTO)
+    +-[SELECT_CLAUSE] SelectClause: '{derived select clause}'
+    |  +-[SELECT_EXPR] SelectExpressionImpl: 'departamen0_.COD_DEPARTAMENTO as COD_DEPARTAMENTO1_0_' {FromElement{explicit,not a collection join,not a fetch join,fetch non-lazy properties,classAlias=null,role=null,tableName=DEPARTAMENTO,tableAlias=departamen0_,origin=null,columns={,className=br.com.springmvc.model.Departamento}}}
+    |  \-[SQL_TOKEN] SqlFragment: 'departamen0_.LOCALIZACAO_DEPARTAMENTO as LOCALIZACAO_DEPART2_0_, departamen0_.NOME_DEPARTAMENTO as NOME_DEPARTAMENTO3_0_'
+    +-[FROM] FromClause: 'from' FromClause{level=1, fromElementCounter=1, fromElements=1, fromElementByClassAlias=[], fromElementByTableAlias=[departamen0_], fromElementsByPath=[], collectionJoinFromElementsByPath=[], impliedElements=[]}
+    |  \-[FROM_FRAGMENT] FromElement: 'DEPARTAMENTO departamen0_' FromElement{explicit,not a collection join,not a fetch join,fetch non-lazy properties,classAlias=null,role=null,tableName=DEPARTAMENTO,tableAlias=departamen0_,origin=null,columns={,className=br.com.springmvc.model.Departamento}}
+    \-[ORDER] OrderByClause: 'order'
+       \-[DOT] DotNode: 'departamen0_.COD_DEPARTAMENTO' {propertyName=codDepartamento,dereferenceType=PRIMITIVE,getPropertyPath=codDepartamento,path={synthetic-alias}.codDepartamento,tableAlias=departamen0_,className=br.com.springmvc.model.Departamento,classAlias=null}
+          +-[IDENT] IdentNode: '{synthetic-alias}' {originalText={synthetic-alias}}
+          \-[IDENT] IdentNode: 'codDepartamento' {originalText=codDepartamento}
+
+DEBUG main org.hibernate.hql.internal.ast.ErrorCounter - throwQueryException() : no errors
+DEBUG main org.hibernate.hql.internal.ast.QueryTranslatorImpl - HQL: from br.com.springmvc.model.Departamento order by codDepartamento
+DEBUG main org.hibernate.hql.internal.ast.QueryTranslatorImpl - SQL: select departamen0_.COD_DEPARTAMENTO as COD_DEPARTAMENTO1_0_, departamen0_.LOCALIZACAO_DEPARTAMENTO as LOCALIZACAO_DEPART2_0_, departamen0_.NOME_DEPARTAMENTO as NOME_DEPARTAMENTO3_0_ from DEPARTAMENTO departamen0_ order by departamen0_.COD_DEPARTAMENTO
+DEBUG main org.hibernate.hql.internal.ast.ErrorCounter - throwQueryException() : no errors
+DEBUG main org.hibernate.SQL - 
+    select
+        departamen0_.COD_DEPARTAMENTO as COD_DEPARTAMENTO1_0_,
+        departamen0_.LOCALIZACAO_DEPARTAMENTO as LOCALIZACAO_DEPART2_0_,
+        departamen0_.NOME_DEPARTAMENTO as NOME_DEPARTAMENTO3_0_ 
+    from
+        DEPARTAMENTO departamen0_ 
+    order by
+        departamen0_.COD_DEPARTAMENTO
+DEBUG main org.hibernate.loader.Loader - Result set row: 0
+DEBUG main org.hibernate.loader.Loader - Result row: EntityKey[br.com.springmvc.model.Departamento#1]
+DEBUG main org.hibernate.loader.Loader - Result set row: 1
+DEBUG main org.hibernate.loader.Loader - Result row: EntityKey[br.com.springmvc.model.Departamento#2]
+DEBUG main org.hibernate.loader.Loader - Result set row: 2
+DEBUG main org.hibernate.loader.Loader - Result row: EntityKey[br.com.springmvc.model.Departamento#3]
+DEBUG main org.hibernate.loader.Loader - Result set row: 3
+DEBUG main org.hibernate.loader.Loader - Result row: EntityKey[br.com.springmvc.model.Departamento#4]
+DEBUG main org.hibernate.loader.Loader - Result set row: 4
+DEBUG main org.hibernate.loader.Loader - Result row: EntityKey[br.com.springmvc.model.Departamento#5]
+DEBUG main org.hibernate.loader.Loader - Result set row: 5
+DEBUG main org.hibernate.loader.Loader - Result row: EntityKey[br.com.springmvc.model.Departamento#10]
+DEBUG main org.hibernate.loader.Loader - Result set row: 6
+DEBUG main org.hibernate.loader.Loader - Result row: EntityKey[br.com.springmvc.model.Departamento#68]
+DEBUG main org.hibernate.loader.Loader - Result set row: 7
+DEBUG main org.hibernate.loader.Loader - Result row: EntityKey[br.com.springmvc.model.Departamento#69]
+DEBUG main org.hibernate.engine.internal.TwoPhaseLoad - Resolving associations for [br.com.springmvc.model.Departamento#1]
+DEBUG main org.hibernate.engine.internal.TwoPhaseLoad - Done materializing entity [br.com.springmvc.model.Departamento#1]
+DEBUG main org.hibernate.engine.internal.TwoPhaseLoad - Resolving associations for [br.com.springmvc.model.Departamento#2]
+DEBUG main org.hibernate.engine.internal.TwoPhaseLoad - Done materializing entity [br.com.springmvc.model.Departamento#2]
+DEBUG main org.hibernate.engine.internal.TwoPhaseLoad - Resolving associations for [br.com.springmvc.model.Departamento#3]
+DEBUG main org.hibernate.engine.internal.TwoPhaseLoad - Done materializing entity [br.com.springmvc.model.Departamento#3]
+DEBUG main org.hibernate.engine.internal.TwoPhaseLoad - Resolving associations for [br.com.springmvc.model.Departamento#4]
+DEBUG main org.hibernate.engine.internal.TwoPhaseLoad - Done materializing entity [br.com.springmvc.model.Departamento#4]
+DEBUG main org.hibernate.engine.internal.TwoPhaseLoad - Resolving associations for [br.com.springmvc.model.Departamento#5]
+DEBUG main org.hibernate.engine.internal.TwoPhaseLoad - Done materializing entity [br.com.springmvc.model.Departamento#5]
+DEBUG main org.hibernate.engine.internal.TwoPhaseLoad - Resolving associations for [br.com.springmvc.model.Departamento#10]
+DEBUG main org.hibernate.engine.internal.TwoPhaseLoad - Done materializing entity [br.com.springmvc.model.Departamento#10]
+DEBUG main org.hibernate.engine.internal.TwoPhaseLoad - Resolving associations for [br.com.springmvc.model.Departamento#68]
+DEBUG main org.hibernate.engine.internal.TwoPhaseLoad - Done materializing entity [br.com.springmvc.model.Departamento#68]
+DEBUG main org.hibernate.engine.internal.TwoPhaseLoad - Resolving associations for [br.com.springmvc.model.Departamento#69]
+DEBUG main org.hibernate.engine.internal.TwoPhaseLoad - Done materializing entity [br.com.springmvc.model.Departamento#69]
+DEBUG main org.springframework.orm.hibernate5.HibernateTransactionManager - Initiating transaction commit
+DEBUG main org.springframework.orm.hibernate5.HibernateTransactionManager - Committing Hibernate transaction on Session [SessionImpl(PersistenceContext[entityKeys=[EntityKey[br.com.springmvc.model.Departamento#5], EntityKey[br.com.springmvc.model.Departamento#69], EntityKey[br.com.springmvc.model.Departamento#4], EntityKey[br.com.springmvc.model.Departamento#68], EntityKey[br.com.springmvc.model.Departamento#3], EntityKey[br.com.springmvc.model.Departamento#2], EntityKey[br.com.springmvc.model.Departamento#1], EntityKey[br.com.springmvc.model.Departamento#10]],collectionKeys=[]];ActionQueue[insertions=ExecutableList{size=0} updates=ExecutableList{size=0} deletions=ExecutableList{size=0} orphanRemovals=ExecutableList{size=0} collectionCreations=ExecutableList{size=0} collectionRemovals=ExecutableList{size=0} collectionUpdates=ExecutableList{size=0} collectionQueuedOps=ExecutableList{size=0} unresolvedInsertDependencies=null])]
+DEBUG main org.hibernate.engine.transaction.internal.TransactionImpl - committing
+DEBUG main org.hibernate.event.internal.AbstractFlushingEventListener - Processing flush-time cascades
+DEBUG main org.hibernate.event.internal.AbstractFlushingEventListener - Dirty checking collections
+DEBUG main org.hibernate.event.internal.AbstractFlushingEventListener - Flushed: 0 insertions, 0 updates, 0 deletions to 8 objects
+DEBUG main org.hibernate.event.internal.AbstractFlushingEventListener - Flushed: 0 (re)creations, 0 updates, 0 removals to 0 collections
+DEBUG main org.hibernate.internal.util.EntityPrinter - Listing entities:
+DEBUG main org.hibernate.internal.util.EntityPrinter - br.com.springmvc.model.Departamento{nomeDepartamento=RECEPÇÃO, codDepartamento=5, localizacaoDepartamento=TÉRREO}
+DEBUG main org.hibernate.internal.util.EntityPrinter - br.com.springmvc.model.Departamento{nomeDepartamento=TERAPIA2, codDepartamento=69, localizacaoDepartamento=14º ANDAR, SALA 35}
+DEBUG main org.hibernate.internal.util.EntityPrinter - br.com.springmvc.model.Departamento{nomeDepartamento=SAQUE, codDepartamento=4, localizacaoDepartamento=4º ANDAR, SALA 12}
+DEBUG main org.hibernate.internal.util.EntityPrinter - br.com.springmvc.model.Departamento{nomeDepartamento=SERVIÇOS GERAIS, codDepartamento=68, localizacaoDepartamento=1º ANDAR, SALA 03}
+DEBUG main org.hibernate.internal.util.EntityPrinter - br.com.springmvc.model.Departamento{nomeDepartamento=RELAÇÕES HUMANAS, codDepartamento=3, localizacaoDepartamento=3º ANDAR, SALA 05}
+DEBUG main org.hibernate.internal.util.EntityPrinter - br.com.springmvc.model.Departamento{nomeDepartamento=PESSOAL, codDepartamento=2, localizacaoDepartamento=2º ANDAR, SALA 03}
+DEBUG main org.hibernate.internal.util.EntityPrinter - br.com.springmvc.model.Departamento{nomeDepartamento=FINANCEIRO, codDepartamento=1, localizacaoDepartamento=1º ANDAR, SALA 22}
+DEBUG main org.hibernate.internal.util.EntityPrinter - br.com.springmvc.model.Departamento{nomeDepartamento=ALMOXARIFADOOOOOO, codDepartamento=10, localizacaoDepartamento=ESTOQUE}
+DEBUG main org.springframework.orm.hibernate5.HibernateTransactionManager - Closing Hibernate Session [SessionImpl(PersistenceContext[entityKeys=[EntityKey[br.com.springmvc.model.Departamento#5], EntityKey[br.com.springmvc.model.Departamento#69], EntityKey[br.com.springmvc.model.Departamento#4], EntityKey[br.com.springmvc.model.Departamento#68], EntityKey[br.com.springmvc.model.Departamento#3], EntityKey[br.com.springmvc.model.Departamento#2], EntityKey[br.com.springmvc.model.Departamento#1], EntityKey[br.com.springmvc.model.Departamento#10]],collectionKeys=[]];ActionQueue[insertions=ExecutableList{size=0} updates=ExecutableList{size=0} deletions=ExecutableList{size=0} orphanRemovals=ExecutableList{size=0} collectionCreations=ExecutableList{size=0} collectionRemovals=ExecutableList{size=0} collectionUpdates=ExecutableList{size=0} collectionQueuedOps=ExecutableList{size=0} unresolvedInsertDependencies=null])] after transaction
+INFO main org.springframework.context.annotation.AnnotationConfigApplicationContext - Closing org.springframework.context.annotation.AnnotationConfigApplicationContext@343f4d3d: startup date [Sun Mar 04 19:49:19 GMT-03:00 2018]; root of context hierarchy
+DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'lifecycleProcessor'
+DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@6ac13091: defining beans [org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalPersistenceAnnotationProcessor,org.springframework.context.event.internalEventListenerProcessor,org.springframework.context.event.internalEventListenerFactory,applicationConfig,departamentoController,departamentoBusinessImpl,departamentoDaoImpl,org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration,org.springframework.transaction.config.internalTransactionAdvisor,transactionAttributeSource,transactionInterceptor,org.springframework.transaction.config.internalTransactionalEventListenerFactory,sessionFactory,dataSource,transactionManager,org.springframework.aop.config.internalAutoProxyCreator]; root of factory hierarchy
+DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Retrieved dependent beans for bean 'sessionFactory': [departamentoDaoImpl, transactionManager]
+DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Retrieved dependent beans for bean 'departamentoDaoImpl': [departamentoBusinessImpl]
+DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Retrieved dependent beans for bean 'departamentoBusinessImpl': [departamentoController]
+DEBUG main org.springframework.beans.factory.support.DisposableBeanAdapter - Invoking destroy() on bean with name 'sessionFactory'
+DEBUG main org.hibernate.internal.SessionFactoryImpl - HHH000031: Closing
+DEBUG main org.hibernate.service.internal.AbstractServiceRegistryImpl - Implicitly destroying ServiceRegistry on de-registration of all child ServiceRegistries
+DEBUG main org.hibernate.boot.registry.internal.BootstrapServiceRegistryImpl - Implicitly destroying Boot-strap registry on de-registration of all child ServiceRegistries
