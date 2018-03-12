@@ -1,9 +1,86 @@
+DEBUG main org.hibernate.loader.plan.exec.internal.LoadQueryJoinAndFetchProcessor - processing queryspace <gen:0>
+DEBUG main org.hibernate.loader.plan.build.spi.LoadPlanTreePrinter - LoadPlan(entity=br.com.springmvc.model.Departamento)
+    - Returns
+       - EntityReturnImpl(entity=br.com.springmvc.model.Departamento, querySpaceUid=<gen:0>, path=br.com.springmvc.model.Departamento)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=br.com.springmvc.model.Departamento)
+          - SQL table alias mapping - departamen0_
+          - alias suffix - 0_
+          - suffixed key columns - {COD_DEPARTAMENTO1_0_0_}
+
+DEBUG main org.hibernate.loader.entity.plan.EntityLoader - Static select for entity br.com.springmvc.model.Departamento [OPTIMISTIC_FORCE_INCREMENT]: select departamen0_.COD_DEPARTAMENTO as COD_DEPARTAMENTO1_0_0_, departamen0_.LOCALIZACAO_DEPARTAMENTO as LOCALIZACAO_DEPART2_0_0_, departamen0_.NOME_DEPARTAMENTO as NOME_DEPARTAMENTO3_0_0_ from DEPARTAMENTO departamen0_ where departamen0_.COD_DEPARTAMENTO=?
+DEBUG main org.hibernate.loader.Loader - Static select for action ACTION_MERGE on entity br.com.springmvc.model.Departamento: select departamen0_.COD_DEPARTAMENTO as COD_DEPARTAMENTO1_0_0_, departamen0_.LOCALIZACAO_DEPARTAMENTO as LOCALIZACAO_DEPART2_0_0_, departamen0_.NOME_DEPARTAMENTO as NOME_DEPARTAMENTO3_0_0_ from DEPARTAMENTO departamen0_ where departamen0_.COD_DEPARTAMENTO=?
+DEBUG main org.hibernate.loader.Loader - Static select for action ACTION_REFRESH on entity br.com.springmvc.model.Departamento: select departamen0_.COD_DEPARTAMENTO as COD_DEPARTAMENTO1_0_0_, departamen0_.LOCALIZACAO_DEPARTAMENTO as LOCALIZACAO_DEPART2_0_0_, departamen0_.NOME_DEPARTAMENTO as NOME_DEPARTAMENTO3_0_0_ from DEPARTAMENTO departamen0_ where departamen0_.COD_DEPARTAMENTO=?
+DEBUG main org.springframework.jdbc.datasource.DriverManagerDataSource - Creating new JDBC DriverManager Connection to [jdbc:oracle:thin:@localhost:1521:xe]
+DEBUG main org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator - No actions specified; doing nothing
+DEBUG main org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - No JtaPlatform was specified, checking resolver
+DEBUG main org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformResolverInitiator - No JtaPlatformResolver was specified, using default [org.hibernate.engine.transaction.jta.platform.internal.StandardJtaPlatformResolver]
+DEBUG main org.hibernate.engine.transaction.jta.platform.internal.StandardJtaPlatformResolver - Could not resolve JtaPlatform, using default [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+DEBUG main org.hibernate.query.spi.NamedQueryRepository - Checking 0 named HQL queries
+DEBUG main org.hibernate.query.spi.NamedQueryRepository - Checking 0 named SQL queries
+DEBUG main org.hibernate.internal.SessionFactoryRegistry - Initializing SessionFactoryRegistry : org.hibernate.internal.SessionFactoryRegistry@66273da0
+DEBUG main org.hibernate.internal.SessionFactoryRegistry - Registering SessionFactory: 46654ab2-4102-4ad2-82d7-2ffdba7e5aa9 (<unnamed>)
+DEBUG main org.hibernate.internal.SessionFactoryRegistry - Not binding SessionFactory to JNDI, no JNDI name configured
+DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Finished creating instance of bean 'sessionFactory'
+DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+DEBUG main org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor - Autowiring by type from bean name 'departamentoDaoImpl' to bean named 'sessionFactory'
+DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+DEBUG main org.springframework.transaction.annotation.AnnotationTransactionAttributeSource - Adding transactional method 'br.com.springmvc.dao.DepartamentoDaoImpl.listarDepartamentos' with attribute: PROPAGATION_REQUIRED,ISOLATION_DEFAULT; ''
+DEBUG main org.springframework.aop.framework.autoproxy.InfrastructureAdvisorAutoProxyCreator - Creating implicit proxy for bean 'departamentoDaoImpl' with 0 common interceptors and 1 specific interceptors
+DEBUG main org.springframework.aop.framework.JdkDynamicAopProxy - Creating JDK dynamic proxy: target source is SingletonTargetSource for target object [br.com.springmvc.dao.DepartamentoDaoImpl@80bfdc6]
+DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Finished creating instance of bean 'departamentoDaoImpl'
+DEBUG main org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor - Autowiring by type from bean name 'departamentoBusinessImpl' to bean named 'departamentoDaoImpl'
+DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+DEBUG main org.springframework.transaction.annotation.AnnotationTransactionAttributeSource - Adding transactional method 'br.com.springmvc.business.DepartamentoBusinessImpl.listarDepartamentos' with attribute: PROPAGATION_REQUIRED,ISOLATION_DEFAULT; ''
+DEBUG main org.springframework.aop.framework.autoproxy.InfrastructureAdvisorAutoProxyCreator - Creating implicit proxy for bean 'departamentoBusinessImpl' with 0 common interceptors and 1 specific interceptors
+DEBUG main org.springframework.aop.framework.JdkDynamicAopProxy - Creating JDK dynamic proxy: target source is SingletonTargetSource for target object [br.com.springmvc.business.DepartamentoBusinessImpl@646c0a67]
+DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Finished creating instance of bean 'departamentoBusinessImpl'
+DEBUG main org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor - Autowiring by type from bean name 'departamentoController' to bean named 'departamentoBusinessImpl'
+DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Finished creating instance of bean 'departamentoController'
+DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'departamentoBusinessImpl'
+DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'departamentoDaoImpl'
+DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration'
+DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'transactionAttributeSource'
+DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'transactionInterceptor'
+DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.transaction.config.internalTransactionalEventListenerFactory'
+DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating instance of bean 'org.springframework.transaction.config.internalTransactionalEventListenerFactory'
+DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration'
+DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Eagerly caching bean 'org.springframework.transaction.config.internalTransactionalEventListenerFactory' to allow for resolving potential circular references
+DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Finished creating instance of bean 'org.springframework.transaction.config.internalTransactionalEventListenerFactory'
+DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'sessionFactory'
+DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'dataSource'
+DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'transactionManager'
+DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating instance of bean 'transactionManager'
+DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'applicationConfig'
+DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'sessionFactory'
+DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Autowiring by type from bean name 'transactionManager' via factory method to bean named 'sessionFactory'
+DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Eagerly caching bean 'transactionManager' to allow for resolving potential circular references
+DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Invoking afterPropertiesSet() on bean with name 'transactionManager'
+INFO main org.springframework.orm.hibernate5.HibernateTransactionManager - Using DataSource [org.springframework.jdbc.datasource.DriverManagerDataSource@f627d13] of Hibernate SessionFactory for HibernateTransactionManager
+DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Finished creating instance of bean 'transactionManager'
+DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'org.springframework.aop.config.internalAutoProxyCreator'
+DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'org.springframework.context.event.internalEventListenerFactory'
+DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionalEventListenerFactory'
+DEBUG main org.springframework.context.annotation.AnnotationConfigApplicationContext - Unable to locate LifecycleProcessor with name 'lifecycleProcessor': using default [org.springframework.context.support.DefaultLifecycleProcessor@7724704f]
+DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'lifecycleProcessor'
+DEBUG main org.springframework.core.env.PropertySourcesPropertyResolver - Could not find key 'spring.liveBeansView.mbeanDomain' in any property source
+DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'departamentoBusinessImpl'
+DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'transactionManager'
+DEBUG main org.springframework.orm.hibernate5.HibernateTransactionManager - Creating new transaction with name [br.com.springmvc.business.DepartamentoBusinessImpl.listarDepartamentos]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT; ''
+DEBUG main org.hibernate.stat.internal.StatisticsInitiator - Statistics initialized [enabled=false]
+DEBUG main org.springframework.orm.hibernate5.HibernateTransactionManager - Opened new Session [SessionImpl(PersistenceContext[entityKeys=[],collectionKeys=[]];ActionQueue[insertions=ExecutableList{size=0} updates=ExecutableList{size=0} deletions=ExecutableList{size=0} orphanRemovals=ExecutableList{size=0} collectionCreations=ExecutableList{size=0} collectionRemovals=ExecutableList{size=0} collectionUpdates=ExecutableList{size=0} collectionQueuedOps=ExecutableList{size=0} unresolvedInsertDependencies=null])] for Hibernate transaction
+DEBUG main org.springframework.orm.hibernate5.HibernateTransactionManager - Preparing JDBC Connection of Hibernate Session [SessionImpl(PersistenceContext[entityKeys=[],collectionKeys=[]];ActionQueue[insertions=ExecutableList{size=0} updates=ExecutableList{size=0} deletions=ExecutableList{size=0} orphanRemovals=ExecutableList{size=0} collectionCreations=ExecutableList{size=0} collectionRemovals=ExecutableList{size=0} collectionUpdates=ExecutableList{size=0} collectionQueuedOps=ExecutableList{size=0} unresolvedInsertDependencies=null])]
 DEBUG main org.springframework.jdbc.datasource.DriverManagerDataSource - Creating new JDBC DriverManager Connection to [jdbc:oracle:thin:@localhost:1521:xe]
 DEBUG main org.hibernate.engine.transaction.internal.TransactionImpl - begin
-DEBUG main org.springframework.orm.hibernate5.HibernateTransactionManager - Exposing Hibernate transaction as JDBC transaction [oracle.jdbc.driver.T4CConnection@feb98ef]
+DEBUG main org.springframework.orm.hibernate5.HibernateTransactionManager - Exposing Hibernate transaction as JDBC transaction [oracle.jdbc.driver.T4CConnection@3f736a16]
 DEBUG main org.springframework.orm.hibernate5.HibernateTransactionManager - Found thread-bound Session [SessionImpl(PersistenceContext[entityKeys=[],collectionKeys=[]];ActionQueue[insertions=ExecutableList{size=0} updates=ExecutableList{size=0} deletions=ExecutableList{size=0} orphanRemovals=ExecutableList{size=0} collectionCreations=ExecutableList{size=0} collectionRemovals=ExecutableList{size=0} collectionUpdates=ExecutableList{size=0} collectionQueuedOps=ExecutableList{size=0} unresolvedInsertDependencies=null])] for Hibernate transaction
 DEBUG main org.springframework.orm.hibernate5.HibernateTransactionManager - Participating in existing transaction
-DEBUG main org.hibernate.hql.internal.QueryTranslatorFactoryInitiator - QueryTranslatorFactory : org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory@2abe9173
+DEBUG main org.hibernate.hql.internal.QueryTranslatorFactoryInitiator - QueryTranslatorFactory : org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory@d613308
 INFO main org.hibernate.hql.internal.QueryTranslatorFactoryInitiator - HHH000397: Using ASTQueryTranslatorFactory
 DEBUG main org.hibernate.hql.internal.ast.QueryTranslatorImpl - parse() - HQL: from br.com.springmvc.model.Departamento order by codDepartamento
 DEBUG main org.hibernate.hql.internal.ast.QueryTranslatorImpl - --- HQL AST ---
@@ -27,7 +104,7 @@ DEBUG main org.hibernate.hql.internal.ast.ErrorCounter - throwQueryException() :
 DEBUG main org.hibernate.hql.internal.antlr.HqlSqlBaseWalker - select << begin [level=1, statement=select]
 DEBUG main org.hibernate.hql.internal.ast.tree.FromElement - FromClause{level=1} : br.com.springmvc.model.Departamento (<no alias>) -> departamen0_
 DEBUG main org.hibernate.hql.internal.ast.tree.FromReferenceNode - Resolved : {synthetic-alias} -> {synthetic-alias}
-DEBUG main org.hibernate.hql.internal.ast.tree.DotNode - getDataType() : codDepartamento -> org.hibernate.type.LongType@1bb564e2
+DEBUG main org.hibernate.hql.internal.ast.tree.DotNode - getDataType() : codDepartamento -> org.hibernate.type.LongType@1cbf6e72
 DEBUG main org.hibernate.hql.internal.ast.tree.FromReferenceNode - Resolved : {synthetic-alias}.codDepartamento -> departamen0_.COD_DEPARTAMENTO
 DEBUG main org.hibernate.hql.internal.antlr.HqlSqlBaseWalker - select : finishing up [level=1, statement=select]
 DEBUG main org.hibernate.hql.internal.ast.HqlSqlWalker - processQuery() :  ( SELECT ( FromClause{level=1} DEPARTAMENTO departamen0_ ) ( order ( departamen0_.COD_DEPARTAMENTO {synthetic-alias} codDepartamento ) ) )
@@ -108,15 +185,65 @@ DEBUG main org.hibernate.internal.util.EntityPrinter - br.com.springmvc.model.De
 DEBUG main org.hibernate.internal.util.EntityPrinter - br.com.springmvc.model.Departamento{nomeDepartamento=FINANCEIRO, codDepartamento=1, localizacaoDepartamento=1º ANDAR, SALA 22}
 DEBUG main org.hibernate.internal.util.EntityPrinter - br.com.springmvc.model.Departamento{nomeDepartamento=ALMOXARIFADOOOOOO, codDepartamento=10, localizacaoDepartamento=ESTOQUE}
 DEBUG main org.springframework.orm.hibernate5.HibernateTransactionManager - Closing Hibernate Session [SessionImpl(PersistenceContext[entityKeys=[EntityKey[br.com.springmvc.model.Departamento#5], EntityKey[br.com.springmvc.model.Departamento#69], EntityKey[br.com.springmvc.model.Departamento#4], EntityKey[br.com.springmvc.model.Departamento#68], EntityKey[br.com.springmvc.model.Departamento#3], EntityKey[br.com.springmvc.model.Departamento#2], EntityKey[br.com.springmvc.model.Departamento#1], EntityKey[br.com.springmvc.model.Departamento#10]],collectionKeys=[]];ActionQueue[insertions=ExecutableList{size=0} updates=ExecutableList{size=0} deletions=ExecutableList{size=0} orphanRemovals=ExecutableList{size=0} collectionCreations=ExecutableList{size=0} collectionRemovals=ExecutableList{size=0} collectionUpdates=ExecutableList{size=0} collectionQueuedOps=ExecutableList{size=0} unresolvedInsertDependencies=null])] after transaction
+INFO main org.springframework.context.annotation.AnnotationConfigApplicationContext - Closing org.springframework.context.annotation.AnnotationConfigApplicationContext@343f4d3d: startup date [Sun Mar 04 19:49:19 GMT-03:00 2018]; root of context hierarchy
+DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'lifecycleProcessor'
+DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@6ac13091: defining beans [org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalPersistenceAnnotationProcessor,org.springframework.context.event.internalEventListenerProcessor,org.springframework.context.event.internalEventListenerFactory,applicationConfig,departamentoController,departamentoBusinessImpl,departamentoDaoImpl,org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration,org.springframework.transaction.config.internalTransactionAdvisor,transactionAttributeSource,transactionInterceptor,org.springframework.transaction.config.internalTransactionalEventListenerFactory,sessionFactory,dataSource,transactionManager,org.springframework.aop.config.internalAutoProxyCreator]; root of factory hierarchy
+DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Retrieved dependent beans for bean 'sessionFactory': [departamentoDaoImpl, transactionManager]
+DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Retrieved dependent beans for bean 'departamentoDaoImpl': [departamentoBusinessImpl]
+DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Retrieved dependent beans for bean 'departamentoBusinessImpl': [departamentoController]
+DEBUG main org.springframework.beans.factory.support.DisposableBeanAdapter - Invoking destroy() on bean with name 'sessionFactory'
+DEBUG main org.hibernate.internal.SessionFactoryImpl - HHH000031: Closing
+DEBUG main org.hibernate.service.internal.AbstractServiceRegistryImpl - Implicitly destroying ServiceRegistry on de-registration of all child ServiceRegistries
+DEBUG main org.hibernate.boot.registry.internal.BootstrapServiceRegistryImpl - Implicitly destroying Boot-strap registry on de-registration of all child ServiceRegistries
 DEBUG main org.springframework.core.env.StandardEnvironment - Adding [systemProperties] PropertySource with lowest search precedence
 DEBUG main org.springframework.core.env.StandardEnvironment - Adding [systemEnvironment] PropertySource with lowest search precedence
 DEBUG main org.springframework.core.env.StandardEnvironment - Initialized StandardEnvironment with PropertySources [systemProperties,systemEnvironment]
-INFO main org.springframework.context.annotation.AnnotationConfigApplicationContext - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@343f4d3d: startup date [Sun Mar 04 19:49:19 GMT-03:00 2018]; root of context hierarchy
-DEBUG main org.springframework.context.annotation.AnnotationConfigApplicationContext - Bean factory for org.springframework.context.annotation.AnnotationConfigApplicationContext@343f4d3d: org.springframework.beans.factory.support.DefaultListableBeanFactory@6ac13091: defining beans [org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalPersistenceAnnotationProcessor,org.springframework.context.event.internalEventListenerProcessor,org.springframework.context.event.internalEventListenerFactory,applicationConfig]; root of factory hierarchy
+INFO main org.springframework.context.annotation.AnnotationConfigApplicationContext - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@57baeedf: startup date [Tue Mar 06 22:13:48 GMT-03:00 2018]; root of context hierarchy
+DEBUG main org.springframework.context.annotation.AnnotationConfigApplicationContext - Bean factory for org.springframework.context.annotation.AnnotationConfigApplicationContext@57baeedf: org.springframework.beans.factory.support.DefaultListableBeanFactory@5276e6b0: defining beans [org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalPersistenceAnnotationProcessor,org.springframework.context.event.internalEventListenerProcessor,org.springframework.context.event.internalEventListenerFactory,configContextWeb]; root of factory hierarchy
 DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.context.annotation.internalConfigurationAnnotationProcessor'
 DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating instance of bean 'org.springframework.context.annotation.internalConfigurationAnnotationProcessor'
 DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Eagerly caching bean 'org.springframework.context.annotation.internalConfigurationAnnotationProcessor' to allow for resolving potential circular references
 DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Finished creating instance of bean 'org.springframework.context.annotation.internalConfigurationAnnotationProcessor'
+DEBUG main org.springframework.core.io.support.PathMatchingResourcePatternResolver - Resolved classpath location [br/com/springmvc/] to resources [URL [file:/D:/backup(D)/Eclipse%20Oxygen/eclipse/workspace/springmvcweb/target/classes/br/com/springmvc/], URL [file:/D:/backup(D)/Eclipse%20Oxygen/eclipse/workspace/springmvccore/target/classes/br/com/springmvc/], URL [file:/D:/backup(D)/Eclipse%20Oxygen/eclipse/workspace/springmvcdao/target/classes/br/com/springmvc/]]
+DEBUG main org.springframework.core.io.support.PathMatchingResourcePatternResolver - Looking for matching resources in directory tree [D:\backup(D)\Eclipse Oxygen\eclipse\workspace\springmvcweb\target\classes\br\com\springmvc]
+DEBUG main org.springframework.core.io.support.PathMatchingResourcePatternResolver - Searching directory [D:\backup(D)\Eclipse Oxygen\eclipse\workspace\springmvcweb\target\classes\br\com\springmvc] for files matching pattern [D:/backup(D)/Eclipse Oxygen/eclipse/workspace/springmvcweb/target/classes/br/com/springmvc/**/*.class]
+DEBUG main org.springframework.core.io.support.PathMatchingResourcePatternResolver - Searching directory [D:\backup(D)\Eclipse Oxygen\eclipse\workspace\springmvcweb\target\classes\br\com\springmvc\config] for files matching pattern [D:/backup(D)/Eclipse Oxygen/eclipse/workspace/springmvcweb/target/classes/br/com/springmvc/**/*.class]
+DEBUG main org.springframework.core.io.support.PathMatchingResourcePatternResolver - Searching directory [D:\backup(D)\Eclipse Oxygen\eclipse\workspace\springmvcweb\target\classes\br\com\springmvc\controller] for files matching pattern [D:/backup(D)/Eclipse Oxygen/eclipse/workspace/springmvcweb/target/classes/br/com/springmvc/**/*.class]
+DEBUG main org.springframework.core.io.support.PathMatchingResourcePatternResolver - Looking for matching resources in directory tree [D:\backup(D)\Eclipse Oxygen\eclipse\workspace\springmvccore\target\classes\br\com\springmvc]
+DEBUG main org.springframework.core.io.support.PathMatchingResourcePatternResolver - Searching directory [D:\backup(D)\Eclipse Oxygen\eclipse\workspace\springmvccore\target\classes\br\com\springmvc] for files matching pattern [D:/backup(D)/Eclipse Oxygen/eclipse/workspace/springmvccore/target/classes/br/com/springmvc/**/*.class]
+DEBUG main org.springframework.core.io.support.PathMatchingResourcePatternResolver - Searching directory [D:\backup(D)\Eclipse Oxygen\eclipse\workspace\springmvccore\target\classes\br\com\springmvc\business] for files matching pattern [D:/backup(D)/Eclipse Oxygen/eclipse/workspace/springmvccore/target/classes/br/com/springmvc/**/*.class]
+DEBUG main org.springframework.core.io.support.PathMatchingResourcePatternResolver - Searching directory [D:\backup(D)\Eclipse Oxygen\eclipse\workspace\springmvccore\target\classes\br\com\springmvc\config] for files matching pattern [D:/backup(D)/Eclipse Oxygen/eclipse/workspace/springmvccore/target/classes/br/com/springmvc/**/*.class]
+DEBUG main org.springframework.core.io.support.PathMatchingResourcePatternResolver - Looking for matching resources in directory tree [D:\backup(D)\Eclipse Oxygen\eclipse\workspace\springmvcdao\target\classes\br\com\springmvc]
+DEBUG main org.springframework.core.io.support.PathMatchingResourcePatternResolver - Searching directory [D:\backup(D)\Eclipse Oxygen\eclipse\workspace\springmvcdao\target\classes\br\com\springmvc] for files matching pattern [D:/backup(D)/Eclipse Oxygen/eclipse/workspace/springmvcdao/target/classes/br/com/springmvc/**/*.class]
+DEBUG main org.springframework.core.io.support.PathMatchingResourcePatternResolver - Searching directory [D:\backup(D)\Eclipse Oxygen\eclipse\workspace\springmvcdao\target\classes\br\com\springmvc\config] for files matching pattern [D:/backup(D)/Eclipse Oxygen/eclipse/workspace/springmvcdao/target/classes/br/com/springmvc/**/*.class]
+DEBUG main org.springframework.core.io.support.PathMatchingResourcePatternResolver - Searching directory [D:\backup(D)\Eclipse Oxygen\eclipse\workspace\springmvcdao\target\classes\br\com\springmvc\dao] for files matching pattern [D:/backup(D)/Eclipse Oxygen/eclipse/workspace/springmvcdao/target/classes/br/com/springmvc/**/*.class]
+DEBUG main org.springframework.core.io.support.PathMatchingResourcePatternResolver - Searching directory [D:\backup(D)\Eclipse Oxygen\eclipse\workspace\springmvcdao\target\classes\br\com\springmvc\model] for files matching pattern [D:/backup(D)/Eclipse Oxygen/eclipse/workspace/springmvcdao/target/classes/br/com/springmvc/**/*.class]
+DEBUG main org.springframework.core.io.support.PathMatchingResourcePatternResolver - Resolved location pattern [classpath*:br/com/springmvc/**/*.class] to resources [file [D:\backup(D)\Eclipse Oxygen\eclipse\workspace\springmvcweb\target\classes\br\com\springmvc\config\ConfigContextWeb.class], file [D:\backup(D)\Eclipse Oxygen\eclipse\workspace\springmvcweb\target\classes\br\com\springmvc\controller\DepartamentoController.class], file [D:\backup(D)\Eclipse Oxygen\eclipse\workspace\springmvccore\target\classes\br\com\springmvc\business\DepartamentoBusiness.class], file [D:\backup(D)\Eclipse Oxygen\eclipse\workspace\springmvccore\target\classes\br\com\springmvc\business\DepartamentoBusinessImpl.class], file [D:\backup(D)\Eclipse Oxygen\eclipse\workspace\springmvccore\target\classes\br\com\springmvc\config\ConfigContextCore.class], file [D:\backup(D)\Eclipse Oxygen\eclipse\workspace\springmvcdao\target\classes\br\com\springmvc\config\ApplicationConfig.class], file [D:\backup(D)\Eclipse Oxygen\eclipse\workspace\springmvcdao\target\classes\br\com\springmvc\dao\DepartamentoDao.class], file [D:\backup(D)\Eclipse Oxygen\eclipse\workspace\springmvcdao\target\classes\br\com\springmvc\dao\DepartamentoDaoImpl.class], file [D:\backup(D)\Eclipse Oxygen\eclipse\workspace\springmvcdao\target\classes\br\com\springmvc\model\Departamento.class]]
+DEBUG main org.springframework.context.annotation.ClassPathBeanDefinitionScanner - Identified candidate component class: file [D:\backup(D)\Eclipse Oxygen\eclipse\workspace\springmvcweb\target\classes\br\com\springmvc\controller\DepartamentoController.class]
+DEBUG main org.springframework.context.annotation.ClassPathBeanDefinitionScanner - Identified candidate component class: file [D:\backup(D)\Eclipse Oxygen\eclipse\workspace\springmvccore\target\classes\br\com\springmvc\business\DepartamentoBusinessImpl.class]
+DEBUG main org.springframework.context.annotation.ClassPathBeanDefinitionScanner - Identified candidate component class: file [D:\backup(D)\Eclipse Oxygen\eclipse\workspace\springmvccore\target\classes\br\com\springmvc\config\ConfigContextCore.class]
+DEBUG main org.springframework.context.annotation.ClassPathBeanDefinitionScanner - Identified candidate component class: file [D:\backup(D)\Eclipse Oxygen\eclipse\workspace\springmvcdao\target\classes\br\com\springmvc\config\ApplicationConfig.class]
+DEBUG main org.springframework.context.annotation.ClassPathBeanDefinitionScanner - Identified candidate component class: file [D:\backup(D)\Eclipse Oxygen\eclipse\workspace\springmvcdao\target\classes\br\com\springmvc\dao\DepartamentoDaoImpl.class]
+DEBUG main org.springframework.core.io.support.PathMatchingResourcePatternResolver - Resolved classpath location [br/com/springmvc/] to resources [URL [file:/D:/backup(D)/Eclipse%20Oxygen/eclipse/workspace/springmvcweb/target/classes/br/com/springmvc/], URL [file:/D:/backup(D)/Eclipse%20Oxygen/eclipse/workspace/springmvccore/target/classes/br/com/springmvc/], URL [file:/D:/backup(D)/Eclipse%20Oxygen/eclipse/workspace/springmvcdao/target/classes/br/com/springmvc/]]
+DEBUG main org.springframework.core.io.support.PathMatchingResourcePatternResolver - Looking for matching resources in directory tree [D:\backup(D)\Eclipse Oxygen\eclipse\workspace\springmvcweb\target\classes\br\com\springmvc]
+DEBUG main org.springframework.core.io.support.PathMatchingResourcePatternResolver - Searching directory [D:\backup(D)\Eclipse Oxygen\eclipse\workspace\springmvcweb\target\classes\br\com\springmvc] for files matching pattern [D:/backup(D)/Eclipse Oxygen/eclipse/workspace/springmvcweb/target/classes/br/com/springmvc/**/*.class]
+DEBUG main org.springframework.core.io.support.PathMatchingResourcePatternResolver - Searching directory [D:\backup(D)\Eclipse Oxygen\eclipse\workspace\springmvcweb\target\classes\br\com\springmvc\config] for files matching pattern [D:/backup(D)/Eclipse Oxygen/eclipse/workspace/springmvcweb/target/classes/br/com/springmvc/**/*.class]
+DEBUG main org.springframework.core.io.support.PathMatchingResourcePatternResolver - Searching directory [D:\backup(D)\Eclipse Oxygen\eclipse\workspace\springmvcweb\target\classes\br\com\springmvc\controller] for files matching pattern [D:/backup(D)/Eclipse Oxygen/eclipse/workspace/springmvcweb/target/classes/br/com/springmvc/**/*.class]
+DEBUG main org.springframework.core.io.support.PathMatchingResourcePatternResolver - Looking for matching resources in directory tree [D:\backup(D)\Eclipse Oxygen\eclipse\workspace\springmvccore\target\classes\br\com\springmvc]
+DEBUG main org.springframework.core.io.support.PathMatchingResourcePatternResolver - Searching directory [D:\backup(D)\Eclipse Oxygen\eclipse\workspace\springmvccore\target\classes\br\com\springmvc] for files matching pattern [D:/backup(D)/Eclipse Oxygen/eclipse/workspace/springmvccore/target/classes/br/com/springmvc/**/*.class]
+DEBUG main org.springframework.core.io.support.PathMatchingResourcePatternResolver - Searching directory [D:\backup(D)\Eclipse Oxygen\eclipse\workspace\springmvccore\target\classes\br\com\springmvc\business] for files matching pattern [D:/backup(D)/Eclipse Oxygen/eclipse/workspace/springmvccore/target/classes/br/com/springmvc/**/*.class]
+DEBUG main org.springframework.core.io.support.PathMatchingResourcePatternResolver - Searching directory [D:\backup(D)\Eclipse Oxygen\eclipse\workspace\springmvccore\target\classes\br\com\springmvc\config] for files matching pattern [D:/backup(D)/Eclipse Oxygen/eclipse/workspace/springmvccore/target/classes/br/com/springmvc/**/*.class]
+DEBUG main org.springframework.core.io.support.PathMatchingResourcePatternResolver - Looking for matching resources in directory tree [D:\backup(D)\Eclipse Oxygen\eclipse\workspace\springmvcdao\target\classes\br\com\springmvc]
+DEBUG main org.springframework.core.io.support.PathMatchingResourcePatternResolver - Searching directory [D:\backup(D)\Eclipse Oxygen\eclipse\workspace\springmvcdao\target\classes\br\com\springmvc] for files matching pattern [D:/backup(D)/Eclipse Oxygen/eclipse/workspace/springmvcdao/target/classes/br/com/springmvc/**/*.class]
+DEBUG main org.springframework.core.io.support.PathMatchingResourcePatternResolver - Searching directory [D:\backup(D)\Eclipse Oxygen\eclipse\workspace\springmvcdao\target\classes\br\com\springmvc\config] for files matching pattern [D:/backup(D)/Eclipse Oxygen/eclipse/workspace/springmvcdao/target/classes/br/com/springmvc/**/*.class]
+DEBUG main org.springframework.core.io.support.PathMatchingResourcePatternResolver - Searching directory [D:\backup(D)\Eclipse Oxygen\eclipse\workspace\springmvcdao\target\classes\br\com\springmvc\dao] for files matching pattern [D:/backup(D)/Eclipse Oxygen/eclipse/workspace/springmvcdao/target/classes/br/com/springmvc/**/*.class]
+DEBUG main org.springframework.core.io.support.PathMatchingResourcePatternResolver - Searching directory [D:\backup(D)\Eclipse Oxygen\eclipse\workspace\springmvcdao\target\classes\br\com\springmvc\model] for files matching pattern [D:/backup(D)/Eclipse Oxygen/eclipse/workspace/springmvcdao/target/classes/br/com/springmvc/**/*.class]
+DEBUG main org.springframework.core.io.support.PathMatchingResourcePatternResolver - Resolved location pattern [classpath*:br/com/springmvc/**/*.class] to resources [file [D:\backup(D)\Eclipse Oxygen\eclipse\workspace\springmvcweb\target\classes\br\com\springmvc\config\ConfigContextWeb.class], file [D:\backup(D)\Eclipse Oxygen\eclipse\workspace\springmvcweb\target\classes\br\com\springmvc\controller\DepartamentoController.class], file [D:\backup(D)\Eclipse Oxygen\eclipse\workspace\springmvccore\target\classes\br\com\springmvc\business\DepartamentoBusiness.class], file [D:\backup(D)\Eclipse Oxygen\eclipse\workspace\springmvccore\target\classes\br\com\springmvc\business\DepartamentoBusinessImpl.class], file [D:\backup(D)\Eclipse Oxygen\eclipse\workspace\springmvccore\target\classes\br\com\springmvc\config\ConfigContextCore.class], file [D:\backup(D)\Eclipse Oxygen\eclipse\workspace\springmvcdao\target\classes\br\com\springmvc\config\ApplicationConfig.class], file [D:\backup(D)\Eclipse Oxygen\eclipse\workspace\springmvcdao\target\classes\br\com\springmvc\dao\DepartamentoDao.class], file [D:\backup(D)\Eclipse Oxygen\eclipse\workspace\springmvcdao\target\classes\br\com\springmvc\dao\DepartamentoDaoImpl.class], file [D:\backup(D)\Eclipse Oxygen\eclipse\workspace\springmvcdao\target\classes\br\com\springmvc\model\Departamento.class]]
+DEBUG main org.springframework.context.annotation.ClassPathBeanDefinitionScanner - Identified candidate component class: file [D:\backup(D)\Eclipse Oxygen\eclipse\workspace\springmvcweb\target\classes\br\com\springmvc\config\ConfigContextWeb.class]
+DEBUG main org.springframework.context.annotation.ClassPathBeanDefinitionScanner - Identified candidate component class: file [D:\backup(D)\Eclipse Oxygen\eclipse\workspace\springmvcweb\target\classes\br\com\springmvc\controller\DepartamentoController.class]
+DEBUG main org.springframework.context.annotation.ClassPathBeanDefinitionScanner - Identified candidate component class: file [D:\backup(D)\Eclipse Oxygen\eclipse\workspace\springmvccore\target\classes\br\com\springmvc\business\DepartamentoBusinessImpl.class]
+DEBUG main org.springframework.context.annotation.ClassPathBeanDefinitionScanner - Identified candidate component class: file [D:\backup(D)\Eclipse Oxygen\eclipse\workspace\springmvcdao\target\classes\br\com\springmvc\config\ApplicationConfig.class]
+DEBUG main org.springframework.context.annotation.ClassPathBeanDefinitionScanner - Identified candidate component class: file [D:\backup(D)\Eclipse Oxygen\eclipse\workspace\springmvcdao\target\classes\br\com\springmvc\dao\DepartamentoDaoImpl.class]
 DEBUG main org.springframework.core.env.StandardEnvironment - Adding [class path resource [config_jdbc.properties]] PropertySource with lowest search precedence
 DEBUG main org.springframework.core.env.StandardEnvironment - Adding [class path resource [log4j.properties]] PropertySource with search precedence immediately higher than [class path resource [config_jdbc.properties]]
 DEBUG main org.springframework.core.io.support.PathMatchingResourcePatternResolver - Resolved classpath location [br/com/springmvc/] to resources [URL [file:/D:/backup(D)/Eclipse%20Oxygen/eclipse/workspace/springmvcweb/target/classes/br/com/springmvc/], URL [file:/D:/backup(D)/Eclipse%20Oxygen/eclipse/workspace/springmvccore/target/classes/br/com/springmvc/], URL [file:/D:/backup(D)/Eclipse%20Oxygen/eclipse/workspace/springmvcdao/target/classes/br/com/springmvc/]]
@@ -127,27 +254,37 @@ DEBUG main org.springframework.core.io.support.PathMatchingResourcePatternResolv
 DEBUG main org.springframework.core.io.support.PathMatchingResourcePatternResolver - Looking for matching resources in directory tree [D:\backup(D)\Eclipse Oxygen\eclipse\workspace\springmvccore\target\classes\br\com\springmvc]
 DEBUG main org.springframework.core.io.support.PathMatchingResourcePatternResolver - Searching directory [D:\backup(D)\Eclipse Oxygen\eclipse\workspace\springmvccore\target\classes\br\com\springmvc] for files matching pattern [D:/backup(D)/Eclipse Oxygen/eclipse/workspace/springmvccore/target/classes/br/com/springmvc/**/*.class]
 DEBUG main org.springframework.core.io.support.PathMatchingResourcePatternResolver - Searching directory [D:\backup(D)\Eclipse Oxygen\eclipse\workspace\springmvccore\target\classes\br\com\springmvc\business] for files matching pattern [D:/backup(D)/Eclipse Oxygen/eclipse/workspace/springmvccore/target/classes/br/com/springmvc/**/*.class]
+DEBUG main org.springframework.core.io.support.PathMatchingResourcePatternResolver - Searching directory [D:\backup(D)\Eclipse Oxygen\eclipse\workspace\springmvccore\target\classes\br\com\springmvc\config] for files matching pattern [D:/backup(D)/Eclipse Oxygen/eclipse/workspace/springmvccore/target/classes/br/com/springmvc/**/*.class]
 DEBUG main org.springframework.core.io.support.PathMatchingResourcePatternResolver - Looking for matching resources in directory tree [D:\backup(D)\Eclipse Oxygen\eclipse\workspace\springmvcdao\target\classes\br\com\springmvc]
 DEBUG main org.springframework.core.io.support.PathMatchingResourcePatternResolver - Searching directory [D:\backup(D)\Eclipse Oxygen\eclipse\workspace\springmvcdao\target\classes\br\com\springmvc] for files matching pattern [D:/backup(D)/Eclipse Oxygen/eclipse/workspace/springmvcdao/target/classes/br/com/springmvc/**/*.class]
 DEBUG main org.springframework.core.io.support.PathMatchingResourcePatternResolver - Searching directory [D:\backup(D)\Eclipse Oxygen\eclipse\workspace\springmvcdao\target\classes\br\com\springmvc\config] for files matching pattern [D:/backup(D)/Eclipse Oxygen/eclipse/workspace/springmvcdao/target/classes/br/com/springmvc/**/*.class]
 DEBUG main org.springframework.core.io.support.PathMatchingResourcePatternResolver - Searching directory [D:\backup(D)\Eclipse Oxygen\eclipse\workspace\springmvcdao\target\classes\br\com\springmvc\dao] for files matching pattern [D:/backup(D)/Eclipse Oxygen/eclipse/workspace/springmvcdao/target/classes/br/com/springmvc/**/*.class]
 DEBUG main org.springframework.core.io.support.PathMatchingResourcePatternResolver - Searching directory [D:\backup(D)\Eclipse Oxygen\eclipse\workspace\springmvcdao\target\classes\br\com\springmvc\model] for files matching pattern [D:/backup(D)/Eclipse Oxygen/eclipse/workspace/springmvcdao/target/classes/br/com/springmvc/**/*.class]
-DEBUG main org.springframework.core.io.support.PathMatchingResourcePatternResolver - Resolved location pattern [classpath*:br/com/springmvc/**/*.class] to resources [file [D:\backup(D)\Eclipse Oxygen\eclipse\workspace\springmvcweb\target\classes\br\com\springmvc\controller\DepartamentoController.class], file [D:\backup(D)\Eclipse Oxygen\eclipse\workspace\springmvccore\target\classes\br\com\springmvc\business\DepartamentoBusiness.class], file [D:\backup(D)\Eclipse Oxygen\eclipse\workspace\springmvccore\target\classes\br\com\springmvc\business\DepartamentoBusinessImpl.class], file [D:\backup(D)\Eclipse Oxygen\eclipse\workspace\springmvcdao\target\classes\br\com\springmvc\config\ApplicationConfig.class], file [D:\backup(D)\Eclipse Oxygen\eclipse\workspace\springmvcdao\target\classes\br\com\springmvc\dao\DepartamentoDao.class], file [D:\backup(D)\Eclipse Oxygen\eclipse\workspace\springmvcdao\target\classes\br\com\springmvc\dao\DepartamentoDaoImpl.class], file [D:\backup(D)\Eclipse Oxygen\eclipse\workspace\springmvcdao\target\classes\br\com\springmvc\model\Departamento.class]]
+DEBUG main org.springframework.core.io.support.PathMatchingResourcePatternResolver - Resolved location pattern [classpath*:br/com/springmvc/**/*.class] to resources [file [D:\backup(D)\Eclipse Oxygen\eclipse\workspace\springmvcweb\target\classes\br\com\springmvc\config\ConfigContextWeb.class], file [D:\backup(D)\Eclipse Oxygen\eclipse\workspace\springmvcweb\target\classes\br\com\springmvc\controller\DepartamentoController.class], file [D:\backup(D)\Eclipse Oxygen\eclipse\workspace\springmvccore\target\classes\br\com\springmvc\business\DepartamentoBusiness.class], file [D:\backup(D)\Eclipse Oxygen\eclipse\workspace\springmvccore\target\classes\br\com\springmvc\business\DepartamentoBusinessImpl.class], file [D:\backup(D)\Eclipse Oxygen\eclipse\workspace\springmvccore\target\classes\br\com\springmvc\config\ConfigContextCore.class], file [D:\backup(D)\Eclipse Oxygen\eclipse\workspace\springmvcdao\target\classes\br\com\springmvc\config\ApplicationConfig.class], file [D:\backup(D)\Eclipse Oxygen\eclipse\workspace\springmvcdao\target\classes\br\com\springmvc\dao\DepartamentoDao.class], file [D:\backup(D)\Eclipse Oxygen\eclipse\workspace\springmvcdao\target\classes\br\com\springmvc\dao\DepartamentoDaoImpl.class], file [D:\backup(D)\Eclipse Oxygen\eclipse\workspace\springmvcdao\target\classes\br\com\springmvc\model\Departamento.class]]
+DEBUG main org.springframework.context.annotation.ClassPathBeanDefinitionScanner - Identified candidate component class: file [D:\backup(D)\Eclipse Oxygen\eclipse\workspace\springmvcweb\target\classes\br\com\springmvc\config\ConfigContextWeb.class]
 DEBUG main org.springframework.context.annotation.ClassPathBeanDefinitionScanner - Identified candidate component class: file [D:\backup(D)\Eclipse Oxygen\eclipse\workspace\springmvcweb\target\classes\br\com\springmvc\controller\DepartamentoController.class]
 DEBUG main org.springframework.context.annotation.ClassPathBeanDefinitionScanner - Identified candidate component class: file [D:\backup(D)\Eclipse Oxygen\eclipse\workspace\springmvccore\target\classes\br\com\springmvc\business\DepartamentoBusinessImpl.class]
+DEBUG main org.springframework.context.annotation.ClassPathBeanDefinitionScanner - Identified candidate component class: file [D:\backup(D)\Eclipse Oxygen\eclipse\workspace\springmvccore\target\classes\br\com\springmvc\config\ConfigContextCore.class]
 DEBUG main org.springframework.context.annotation.ClassPathBeanDefinitionScanner - Identified candidate component class: file [D:\backup(D)\Eclipse Oxygen\eclipse\workspace\springmvcdao\target\classes\br\com\springmvc\dao\DepartamentoDaoImpl.class]
 DEBUG main org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader - Registered bean definition for imported class 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration'
 DEBUG main org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader - Registering bean definition for @Bean method org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration.org.springframework.transaction.config.internalTransactionAdvisor()
 DEBUG main org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader - Registering bean definition for @Bean method org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration.transactionAttributeSource()
 DEBUG main org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader - Registering bean definition for @Bean method org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration.transactionInterceptor()
 DEBUG main org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader - Registering bean definition for @Bean method org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration.org.springframework.transaction.config.internalTransactionalEventListenerFactory()
+DEBUG main org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader - Registering bean definition for @Bean method br.com.springmvc.config.ConfigContextCore.departamentoBusiness()
 DEBUG main org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader - Registering bean definition for @Bean method br.com.springmvc.config.ApplicationConfig.sessionFactory()
 DEBUG main org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader - Registering bean definition for @Bean method br.com.springmvc.config.ApplicationConfig.dataSource()
 DEBUG main org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader - Registering bean definition for @Bean method br.com.springmvc.config.ApplicationConfig.transactionManager()
-DEBUG main org.springframework.context.annotation.ConfigurationClassEnhancer - Successfully enhanced br.com.springmvc.config.ApplicationConfig; enhanced class name is: br.com.springmvc.config.ApplicationConfig$$EnhancerBySpringCGLIB$$2ae55ed5
-DEBUG main org.springframework.context.annotation.ConfigurationClassPostProcessor - Replacing bean definition 'applicationConfig' existing class 'br.com.springmvc.config.ApplicationConfig' with enhanced class 'br.com.springmvc.config.ApplicationConfig$$EnhancerBySpringCGLIB$$2ae55ed5'
-DEBUG main org.springframework.context.annotation.ConfigurationClassEnhancer - Successfully enhanced org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration; enhanced class name is: org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$d9fcd33e
-DEBUG main org.springframework.context.annotation.ConfigurationClassPostProcessor - Replacing bean definition 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' existing class 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' with enhanced class 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$d9fcd33e'
+DEBUG main org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader - Registering bean definition for @Bean method br.com.springmvc.config.ConfigContextWeb.departamentoBusiness()
+INFO main org.springframework.beans.factory.support.DefaultListableBeanFactory - Overriding bean definition for bean 'departamentoBusiness' with a different definition: replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=configContextCore; factoryMethodName=departamentoBusiness; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [br/com/springmvc/config/ConfigContextCore.class]] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=configContextWeb; factoryMethodName=departamentoBusiness; initMethodName=null; destroyMethodName=(inferred); defined in br.com.springmvc.config.ConfigContextWeb]
+DEBUG main org.springframework.context.annotation.ConfigurationClassEnhancer - Successfully enhanced br.com.springmvc.config.ConfigContextWeb; enhanced class name is: br.com.springmvc.config.ConfigContextWeb$$EnhancerBySpringCGLIB$$1302aa9f
+DEBUG main org.springframework.context.annotation.ConfigurationClassPostProcessor - Replacing bean definition 'configContextWeb' existing class 'br.com.springmvc.config.ConfigContextWeb' with enhanced class 'br.com.springmvc.config.ConfigContextWeb$$EnhancerBySpringCGLIB$$1302aa9f'
+DEBUG main org.springframework.context.annotation.ConfigurationClassEnhancer - Successfully enhanced br.com.springmvc.config.ConfigContextCore; enhanced class name is: br.com.springmvc.config.ConfigContextCore$$EnhancerBySpringCGLIB$$7687ea04
+DEBUG main org.springframework.context.annotation.ConfigurationClassPostProcessor - Replacing bean definition 'configContextCore' existing class 'br.com.springmvc.config.ConfigContextCore' with enhanced class 'br.com.springmvc.config.ConfigContextCore$$EnhancerBySpringCGLIB$$7687ea04'
+DEBUG main org.springframework.context.annotation.ConfigurationClassEnhancer - Successfully enhanced br.com.springmvc.config.ApplicationConfig; enhanced class name is: br.com.springmvc.config.ApplicationConfig$$EnhancerBySpringCGLIB$$546c302a
+DEBUG main org.springframework.context.annotation.ConfigurationClassPostProcessor - Replacing bean definition 'applicationConfig' existing class 'br.com.springmvc.config.ApplicationConfig' with enhanced class 'br.com.springmvc.config.ApplicationConfig$$EnhancerBySpringCGLIB$$546c302a'
+DEBUG main org.springframework.context.annotation.ConfigurationClassEnhancer - Successfully enhanced org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration; enhanced class name is: org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$383a493
+DEBUG main org.springframework.context.annotation.ConfigurationClassPostProcessor - Replacing bean definition 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' existing class 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' with enhanced class 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$383a493'
 DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.context.annotation.internalAutowiredAnnotationProcessor'
 DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating instance of bean 'org.springframework.context.annotation.internalAutowiredAnnotationProcessor'
 DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Eagerly caching bean 'org.springframework.context.annotation.internalAutowiredAnnotationProcessor' to allow for resolving potential circular references
@@ -168,9 +305,9 @@ DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory 
 DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating instance of bean 'org.springframework.aop.config.internalAutoProxyCreator'
 DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Eagerly caching bean 'org.springframework.aop.config.internalAutoProxyCreator' to allow for resolving potential circular references
 DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Finished creating instance of bean 'org.springframework.aop.config.internalAutoProxyCreator'
-DEBUG main org.springframework.context.annotation.AnnotationConfigApplicationContext - Unable to locate MessageSource with name 'messageSource': using default [org.springframework.context.support.DelegatingMessageSource@446a1e84]
-DEBUG main org.springframework.context.annotation.AnnotationConfigApplicationContext - Unable to locate ApplicationEventMulticaster with name 'applicationEventMulticaster': using default [org.springframework.context.event.SimpleApplicationEventMulticaster@57db2b13]
-DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@6ac13091: defining beans [org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalPersistenceAnnotationProcessor,org.springframework.context.event.internalEventListenerProcessor,org.springframework.context.event.internalEventListenerFactory,applicationConfig,departamentoController,departamentoBusinessImpl,departamentoDaoImpl,org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration,org.springframework.transaction.config.internalTransactionAdvisor,transactionAttributeSource,transactionInterceptor,org.springframework.transaction.config.internalTransactionalEventListenerFactory,sessionFactory,dataSource,transactionManager,org.springframework.aop.config.internalAutoProxyCreator]; root of factory hierarchy
+DEBUG main org.springframework.context.annotation.AnnotationConfigApplicationContext - Unable to locate MessageSource with name 'messageSource': using default [org.springframework.context.support.DelegatingMessageSource@d23e042]
+DEBUG main org.springframework.context.annotation.AnnotationConfigApplicationContext - Unable to locate ApplicationEventMulticaster with name 'applicationEventMulticaster': using default [org.springframework.context.event.SimpleApplicationEventMulticaster@14bdbc74]
+DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@5276e6b0: defining beans [org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalPersistenceAnnotationProcessor,org.springframework.context.event.internalEventListenerProcessor,org.springframework.context.event.internalEventListenerFactory,configContextWeb,departamentoController,departamentoBusinessImpl,configContextCore,applicationConfig,departamentoDaoImpl,org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration,org.springframework.transaction.config.internalTransactionAdvisor,transactionAttributeSource,transactionInterceptor,org.springframework.transaction.config.internalTransactionalEventListenerFactory,departamentoBusiness,org.springframework.aop.config.internalAutoProxyCreator,sessionFactory,dataSource,transactionManager]; root of factory hierarchy
 DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'org.springframework.context.annotation.internalConfigurationAnnotationProcessor'
 DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'org.springframework.context.annotation.internalAutowiredAnnotationProcessor'
 DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'org.springframework.context.annotation.internalRequiredAnnotationProcessor'
@@ -183,7 +320,7 @@ DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory 
 DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating instance of bean 'org.springframework.transaction.config.internalTransactionAdvisor'
 DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration'
 DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating instance of bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration'
-DEBUG main org.springframework.beans.factory.annotation.InjectionMetadata - Registered injected element on class [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$d9fcd33e]: AutowiredMethodElement for void org.springframework.transaction.annotation.AbstractTransactionManagementConfiguration.setConfigurers(java.util.Collection)
+DEBUG main org.springframework.beans.factory.annotation.InjectionMetadata - Registered injected element on class [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$383a493]: AutowiredMethodElement for void org.springframework.transaction.annotation.AbstractTransactionManagementConfiguration.setConfigurers(java.util.Collection)
 DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Eagerly caching bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' to allow for resolving potential circular references
 DEBUG main org.springframework.beans.factory.annotation.InjectionMetadata - Processing injected element of bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration': AutowiredMethodElement for void org.springframework.transaction.annotation.AbstractTransactionManagementConfiguration.setConfigurers(java.util.Collection)
 DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'org.springframework.context.annotation.ConfigurationClassPostProcessor.importRegistry'
@@ -210,25 +347,22 @@ DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory 
 DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Eagerly caching bean 'org.springframework.context.event.internalEventListenerFactory' to allow for resolving potential circular references
 DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
 DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Finished creating instance of bean 'org.springframework.context.event.internalEventListenerFactory'
-DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'applicationConfig'
-DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating instance of bean 'applicationConfig'
-DEBUG main org.springframework.beans.factory.annotation.InjectionMetadata - Registered injected element on class [br.com.springmvc.config.ApplicationConfig$$EnhancerBySpringCGLIB$$2ae55ed5]: AutowiredFieldElement for private org.springframework.core.env.Environment br.com.springmvc.config.ApplicationConfig.env
-DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Eagerly caching bean 'applicationConfig' to allow for resolving potential circular references
-DEBUG main org.springframework.beans.factory.annotation.InjectionMetadata - Processing injected element of bean 'applicationConfig': AutowiredFieldElement for private org.springframework.core.env.Environment br.com.springmvc.config.ApplicationConfig.env
-DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'environment'
-DEBUG main org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor - Autowiring by type from bean name 'applicationConfig' to bean named 'environment'
+DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'configContextWeb'
+DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating instance of bean 'configContextWeb'
+DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Eagerly caching bean 'configContextWeb' to allow for resolving potential circular references
 DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
-DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Finished creating instance of bean 'applicationConfig'
+DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Finished creating instance of bean 'configContextWeb'
 DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'departamentoController'
 DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating instance of bean 'departamentoController'
 DEBUG main org.springframework.beans.factory.annotation.InjectionMetadata - Registered injected element on class [br.com.springmvc.controller.DepartamentoController]: AutowiredFieldElement for private br.com.springmvc.business.DepartamentoBusiness br.com.springmvc.controller.DepartamentoController.departamentoBusiness
 DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Eagerly caching bean 'departamentoController' to allow for resolving potential circular references
 DEBUG main org.springframework.beans.factory.annotation.InjectionMetadata - Processing injected element of bean 'departamentoController': AutowiredFieldElement for private br.com.springmvc.business.DepartamentoBusiness br.com.springmvc.controller.DepartamentoController.departamentoBusiness
-DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'departamentoBusinessImpl'
-DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating instance of bean 'departamentoBusinessImpl'
+DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'departamentoBusiness'
+DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating instance of bean 'departamentoBusiness'
+DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'configContextWeb'
 DEBUG main org.springframework.beans.factory.annotation.InjectionMetadata - Registered injected element on class [br.com.springmvc.business.DepartamentoBusinessImpl]: AutowiredFieldElement for private br.com.springmvc.dao.DepartamentoDao br.com.springmvc.business.DepartamentoBusinessImpl.departamentoDao
-DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Eagerly caching bean 'departamentoBusinessImpl' to allow for resolving potential circular references
-DEBUG main org.springframework.beans.factory.annotation.InjectionMetadata - Processing injected element of bean 'departamentoBusinessImpl': AutowiredFieldElement for private br.com.springmvc.dao.DepartamentoDao br.com.springmvc.business.DepartamentoBusinessImpl.departamentoDao
+DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Eagerly caching bean 'departamentoBusiness' to allow for resolving potential circular references
+DEBUG main org.springframework.beans.factory.annotation.InjectionMetadata - Processing injected element of bean 'departamentoBusiness': AutowiredFieldElement for private br.com.springmvc.dao.DepartamentoDao br.com.springmvc.business.DepartamentoBusinessImpl.departamentoDao
 DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'departamentoDaoImpl'
 DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating instance of bean 'departamentoDaoImpl'
 DEBUG main org.springframework.beans.factory.annotation.InjectionMetadata - Registered injected element on class [br.com.springmvc.dao.DepartamentoDaoImpl]: AutowiredFieldElement for private org.hibernate.SessionFactory br.com.springmvc.dao.DepartamentoDaoImpl.sessionFactory
@@ -236,7 +370,15 @@ DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory 
 DEBUG main org.springframework.beans.factory.annotation.InjectionMetadata - Processing injected element of bean 'departamentoDaoImpl': AutowiredFieldElement for private org.hibernate.SessionFactory br.com.springmvc.dao.DepartamentoDaoImpl.sessionFactory
 DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'sessionFactory'
 DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating instance of bean 'sessionFactory'
-DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'applicationConfig'
+DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'applicationConfig'
+DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating instance of bean 'applicationConfig'
+DEBUG main org.springframework.beans.factory.annotation.InjectionMetadata - Registered injected element on class [br.com.springmvc.config.ApplicationConfig$$EnhancerBySpringCGLIB$$546c302a]: AutowiredFieldElement for private org.springframework.core.env.Environment br.com.springmvc.config.ApplicationConfig.env
+DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Eagerly caching bean 'applicationConfig' to allow for resolving potential circular references
+DEBUG main org.springframework.beans.factory.annotation.InjectionMetadata - Processing injected element of bean 'applicationConfig': AutowiredFieldElement for private org.springframework.core.env.Environment br.com.springmvc.config.ApplicationConfig.env
+DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'environment'
+DEBUG main org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor - Autowiring by type from bean name 'applicationConfig' to bean named 'environment'
+DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Finished creating instance of bean 'applicationConfig'
 DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'dataSource'
 DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating instance of bean 'dataSource'
 DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'applicationConfig'
@@ -268,118 +410,118 @@ DEBUG main org.hibernate.service.spi.ServiceBinding - Overriding existing servic
 DEBUG main org.hibernate.cfg.Configuration - Building session factory using provided StandardServiceRegistry
 DEBUG main org.hibernate.cache.internal.RegionFactoryInitiator - Cache region factory : org.hibernate.cache.internal.NoCachingRegionFactory
 INFO main org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
-DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration boolean -> org.hibernate.type.BooleanType@3543df7d
-DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration boolean -> org.hibernate.type.BooleanType@3543df7d
-DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration java.lang.Boolean -> org.hibernate.type.BooleanType@3543df7d
-DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration numeric_boolean -> org.hibernate.type.NumericBooleanType@5bd82fed
-DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration true_false -> org.hibernate.type.TrueFalseType@39ad977d
-DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration yes_no -> org.hibernate.type.YesNoType@75b25825
-DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration byte -> org.hibernate.type.ByteType@45e37a7e
-DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration byte -> org.hibernate.type.ByteType@45e37a7e
-DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration java.lang.Byte -> org.hibernate.type.ByteType@45e37a7e
-DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration character -> org.hibernate.type.CharacterType@488eb7f2
-DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration char -> org.hibernate.type.CharacterType@488eb7f2
-DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration java.lang.Character -> org.hibernate.type.CharacterType@488eb7f2
-DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration short -> org.hibernate.type.ShortType@478ee483
-DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration short -> org.hibernate.type.ShortType@478ee483
-DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration java.lang.Short -> org.hibernate.type.ShortType@478ee483
-DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration integer -> org.hibernate.type.IntegerType@4044fb95
-DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration int -> org.hibernate.type.IntegerType@4044fb95
-DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration java.lang.Integer -> org.hibernate.type.IntegerType@4044fb95
-DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration long -> org.hibernate.type.LongType@1cbf6e72
-DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration long -> org.hibernate.type.LongType@1cbf6e72
-DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration java.lang.Long -> org.hibernate.type.LongType@1cbf6e72
-DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration float -> org.hibernate.type.FloatType@29df4d43
-DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration float -> org.hibernate.type.FloatType@29df4d43
-DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration java.lang.Float -> org.hibernate.type.FloatType@29df4d43
-DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration double -> org.hibernate.type.DoubleType@75390459
-DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration double -> org.hibernate.type.DoubleType@75390459
-DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration java.lang.Double -> org.hibernate.type.DoubleType@75390459
-DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration big_decimal -> org.hibernate.type.BigDecimalType@58c34bb3
-DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration java.math.BigDecimal -> org.hibernate.type.BigDecimalType@58c34bb3
-DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration big_integer -> org.hibernate.type.BigIntegerType@207b8649
-DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration java.math.BigInteger -> org.hibernate.type.BigIntegerType@207b8649
-DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration string -> org.hibernate.type.StringType@163d04ff
-DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration java.lang.String -> org.hibernate.type.StringType@163d04ff
-DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration nstring -> org.hibernate.type.StringNVarcharType@25e2a451
-DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration ncharacter -> org.hibernate.type.CharacterNCharType@201b6b6f
-DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration url -> org.hibernate.type.UrlType@30bcf3c1
-DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration java.net.URL -> org.hibernate.type.UrlType@30bcf3c1
-DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration Duration -> org.hibernate.type.DurationType@792bbc74
-DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration java.time.Duration -> org.hibernate.type.DurationType@792bbc74
-DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration Instant -> org.hibernate.type.InstantType@6d304f9d
-DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration java.time.Instant -> org.hibernate.type.InstantType@6d304f9d
-DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration LocalDateTime -> org.hibernate.type.LocalDateTimeType@4cc6fa2a
-DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration java.time.LocalDateTime -> org.hibernate.type.LocalDateTimeType@4cc6fa2a
-DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration LocalDate -> org.hibernate.type.LocalDateType@435871cb
-DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration java.time.LocalDate -> org.hibernate.type.LocalDateType@435871cb
-DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration LocalTime -> org.hibernate.type.LocalTimeType@55b5f5d2
-DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration java.time.LocalTime -> org.hibernate.type.LocalTimeType@55b5f5d2
-DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration OffsetDateTime -> org.hibernate.type.OffsetDateTimeType@2b95e48b
-DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration java.time.OffsetDateTime -> org.hibernate.type.OffsetDateTimeType@2b95e48b
-DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration OffsetTime -> org.hibernate.type.OffsetTimeType@5316e95f
-DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration java.time.OffsetTime -> org.hibernate.type.OffsetTimeType@5316e95f
-DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration ZonedDateTime -> org.hibernate.type.ZonedDateTimeType@1dd0e7c4
-DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration java.time.ZonedDateTime -> org.hibernate.type.ZonedDateTimeType@1dd0e7c4
-DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration date -> org.hibernate.type.DateType@1b065145
-DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration java.sql.Date -> org.hibernate.type.DateType@1b065145
-DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration time -> org.hibernate.type.TimeType@630cb4a4
-DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration java.sql.Time -> org.hibernate.type.TimeType@630cb4a4
-DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration timestamp -> org.hibernate.type.TimestampType@1eb6749b
-DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration java.sql.Timestamp -> org.hibernate.type.TimestampType@1eb6749b
-DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration java.util.Date -> org.hibernate.type.TimestampType@1eb6749b
-DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration dbtimestamp -> org.hibernate.type.DbTimestampType@650eab8
-DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration calendar -> org.hibernate.type.CalendarType@4c37b5b
-DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration java.util.Calendar -> org.hibernate.type.CalendarType@4c37b5b
-DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration java.util.GregorianCalendar -> org.hibernate.type.CalendarType@4c37b5b
-DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration calendar_date -> org.hibernate.type.CalendarDateType@3c435123
-DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration locale -> org.hibernate.type.LocaleType@5357c287
-DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration java.util.Locale -> org.hibernate.type.LocaleType@5357c287
-DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration currency -> org.hibernate.type.CurrencyType@5b04476e
-DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration java.util.Currency -> org.hibernate.type.CurrencyType@5b04476e
-DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration timezone -> org.hibernate.type.TimeZoneType@4a335fa8
-DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration java.util.TimeZone -> org.hibernate.type.TimeZoneType@4a335fa8
-DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration class -> org.hibernate.type.ClassType@30990c1b
-DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration java.lang.Class -> org.hibernate.type.ClassType@30990c1b
-DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration uuid-binary -> org.hibernate.type.UUIDBinaryType@5d018107
-DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration java.util.UUID -> org.hibernate.type.UUIDBinaryType@5d018107
-DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration uuid-char -> org.hibernate.type.UUIDCharType@339bf286
-DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration binary -> org.hibernate.type.BinaryType@557a1e2d
-DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration byte[] -> org.hibernate.type.BinaryType@557a1e2d
-DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration [B -> org.hibernate.type.BinaryType@557a1e2d
-DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration wrapper-binary -> org.hibernate.type.WrapperBinaryType@4b3c354a
-DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration Byte[] -> org.hibernate.type.WrapperBinaryType@4b3c354a
-DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration [Ljava.lang.Byte; -> org.hibernate.type.WrapperBinaryType@4b3c354a
-DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration row_version -> org.hibernate.type.RowVersionType@54227100
-DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration image -> org.hibernate.type.ImageType@4763c727
-DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration characters -> org.hibernate.type.CharArrayType@9ed238c
-DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration char[] -> org.hibernate.type.CharArrayType@9ed238c
-DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration [C -> org.hibernate.type.CharArrayType@9ed238c
-DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration wrapper-characters -> org.hibernate.type.CharacterArrayType@2dbf4cbd
-DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration [Ljava.lang.Character; -> org.hibernate.type.CharacterArrayType@2dbf4cbd
-DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration Character[] -> org.hibernate.type.CharacterArrayType@2dbf4cbd
-DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration text -> org.hibernate.type.TextType@62fad19
-DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration ntext -> org.hibernate.type.NTextType@65a4798f
-DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration blob -> org.hibernate.type.BlobType@28d6290
-DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration java.sql.Blob -> org.hibernate.type.BlobType@28d6290
-DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration materialized_blob -> org.hibernate.type.MaterializedBlobType@51850751
-DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration clob -> org.hibernate.type.ClobType@533377b
-DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration java.sql.Clob -> org.hibernate.type.ClobType@533377b
-DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration nclob -> org.hibernate.type.NClobType@f74e835
-DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration java.sql.NClob -> org.hibernate.type.NClobType@f74e835
-DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration materialized_clob -> org.hibernate.type.MaterializedClobType@19fe4644
-DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration materialized_nclob -> org.hibernate.type.MaterializedNClobType@18245eb0
-DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration serializable -> org.hibernate.type.SerializableType@3a94964
-DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration object -> org.hibernate.type.ObjectType@62e70ea3
-DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration java.lang.Object -> org.hibernate.type.ObjectType@62e70ea3
-DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration imm_date -> org.hibernate.type.AdaptedImmutableType@2ed3b1f5
-DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration imm_time -> org.hibernate.type.AdaptedImmutableType@63648ee9
-DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration imm_timestamp -> org.hibernate.type.AdaptedImmutableType@68d6972f
-DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration imm_dbtimestamp -> org.hibernate.type.AdaptedImmutableType@45be7cd5
-DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration imm_calendar -> org.hibernate.type.AdaptedImmutableType@7651218e
-DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration imm_calendar_date -> org.hibernate.type.AdaptedImmutableType@3185fa6b
-DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration imm_binary -> org.hibernate.type.AdaptedImmutableType@6d366c9b
-DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration imm_serializable -> org.hibernate.type.AdaptedImmutableType@5b58ed3c
+DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration boolean -> org.hibernate.type.BooleanType@6b44435b
+DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration boolean -> org.hibernate.type.BooleanType@6b44435b
+DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration java.lang.Boolean -> org.hibernate.type.BooleanType@6b44435b
+DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration numeric_boolean -> org.hibernate.type.NumericBooleanType@4212a0c8
+DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration true_false -> org.hibernate.type.TrueFalseType@17a87e37
+DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration yes_no -> org.hibernate.type.YesNoType@6da00fb9
+DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration byte -> org.hibernate.type.ByteType@78fbff54
+DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration byte -> org.hibernate.type.ByteType@78fbff54
+DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration java.lang.Byte -> org.hibernate.type.ByteType@78fbff54
+DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration character -> org.hibernate.type.CharacterType@5bc9ba1d
+DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration char -> org.hibernate.type.CharacterType@5bc9ba1d
+DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration java.lang.Character -> org.hibernate.type.CharacterType@5bc9ba1d
+DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration short -> org.hibernate.type.ShortType@320de594
+DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration short -> org.hibernate.type.ShortType@320de594
+DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration java.lang.Short -> org.hibernate.type.ShortType@320de594
+DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration integer -> org.hibernate.type.IntegerType@686449f9
+DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration int -> org.hibernate.type.IntegerType@686449f9
+DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration java.lang.Integer -> org.hibernate.type.IntegerType@686449f9
+DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration long -> org.hibernate.type.LongType@3f792b9b
+DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration long -> org.hibernate.type.LongType@3f792b9b
+DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration java.lang.Long -> org.hibernate.type.LongType@3f792b9b
+DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration float -> org.hibernate.type.FloatType@21baa903
+DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration float -> org.hibernate.type.FloatType@21baa903
+DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration java.lang.Float -> org.hibernate.type.FloatType@21baa903
+DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration double -> org.hibernate.type.DoubleType@4a891c97
+DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration double -> org.hibernate.type.DoubleType@4a891c97
+DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration java.lang.Double -> org.hibernate.type.DoubleType@4a891c97
+DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration big_decimal -> org.hibernate.type.BigDecimalType@565b064f
+DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration java.math.BigDecimal -> org.hibernate.type.BigDecimalType@565b064f
+DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration big_integer -> org.hibernate.type.BigIntegerType@62f4ff3b
+DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration java.math.BigInteger -> org.hibernate.type.BigIntegerType@62f4ff3b
+DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration string -> org.hibernate.type.StringType@2b5825fa
+DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration java.lang.String -> org.hibernate.type.StringType@2b5825fa
+DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration nstring -> org.hibernate.type.StringNVarcharType@f667fe
+DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration ncharacter -> org.hibernate.type.CharacterNCharType@328cf0e1
+DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration url -> org.hibernate.type.UrlType@3e5499cc
+DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration java.net.URL -> org.hibernate.type.UrlType@3e5499cc
+DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration Duration -> org.hibernate.type.DurationType@cb191ca
+DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration java.time.Duration -> org.hibernate.type.DurationType@cb191ca
+DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration Instant -> org.hibernate.type.InstantType@1fdfafd2
+DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration java.time.Instant -> org.hibernate.type.InstantType@1fdfafd2
+DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration LocalDateTime -> org.hibernate.type.LocalDateTimeType@40499e4f
+DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration java.time.LocalDateTime -> org.hibernate.type.LocalDateTimeType@40499e4f
+DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration LocalDate -> org.hibernate.type.LocalDateType@61884cb1
+DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration java.time.LocalDate -> org.hibernate.type.LocalDateType@61884cb1
+DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration LocalTime -> org.hibernate.type.LocalTimeType@27953a83
+DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration java.time.LocalTime -> org.hibernate.type.LocalTimeType@27953a83
+DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration OffsetDateTime -> org.hibernate.type.OffsetDateTimeType@efde75f
+DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration java.time.OffsetDateTime -> org.hibernate.type.OffsetDateTimeType@efde75f
+DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration OffsetTime -> org.hibernate.type.OffsetTimeType@12bfd80d
+DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration java.time.OffsetTime -> org.hibernate.type.OffsetTimeType@12bfd80d
+DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration ZonedDateTime -> org.hibernate.type.ZonedDateTimeType@388ba540
+DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration java.time.ZonedDateTime -> org.hibernate.type.ZonedDateTimeType@388ba540
+DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration date -> org.hibernate.type.DateType@60f7cc1d
+DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration java.sql.Date -> org.hibernate.type.DateType@60f7cc1d
+DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration time -> org.hibernate.type.TimeType@5827af16
+DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration java.sql.Time -> org.hibernate.type.TimeType@5827af16
+DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration timestamp -> org.hibernate.type.TimestampType@239b0f9d
+DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration java.sql.Timestamp -> org.hibernate.type.TimestampType@239b0f9d
+DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration java.util.Date -> org.hibernate.type.TimestampType@239b0f9d
+DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration dbtimestamp -> org.hibernate.type.DbTimestampType@652a7737
+DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration calendar -> org.hibernate.type.CalendarType@53f48368
+DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration java.util.Calendar -> org.hibernate.type.CalendarType@53f48368
+DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration java.util.GregorianCalendar -> org.hibernate.type.CalendarType@53f48368
+DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration calendar_date -> org.hibernate.type.CalendarDateType@71b3bc45
+DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration locale -> org.hibernate.type.LocaleType@5ce33a58
+DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration java.util.Locale -> org.hibernate.type.LocaleType@5ce33a58
+DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration currency -> org.hibernate.type.CurrencyType@25748410
+DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration java.util.Currency -> org.hibernate.type.CurrencyType@25748410
+DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration timezone -> org.hibernate.type.TimeZoneType@75e01201
+DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration java.util.TimeZone -> org.hibernate.type.TimeZoneType@75e01201
+DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration class -> org.hibernate.type.ClassType@1bb1fde8
+DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration java.lang.Class -> org.hibernate.type.ClassType@1bb1fde8
+DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration uuid-binary -> org.hibernate.type.UUIDBinaryType@56ace400
+DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration java.util.UUID -> org.hibernate.type.UUIDBinaryType@56ace400
+DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration uuid-char -> org.hibernate.type.UUIDCharType@6cbcf243
+DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration binary -> org.hibernate.type.BinaryType@7bc10d84
+DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration byte[] -> org.hibernate.type.BinaryType@7bc10d84
+DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration [B -> org.hibernate.type.BinaryType@7bc10d84
+DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration wrapper-binary -> org.hibernate.type.WrapperBinaryType@33e01298
+DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration Byte[] -> org.hibernate.type.WrapperBinaryType@33e01298
+DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration [Ljava.lang.Byte; -> org.hibernate.type.WrapperBinaryType@33e01298
+DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration row_version -> org.hibernate.type.RowVersionType@b968a76
+DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration image -> org.hibernate.type.ImageType@7829b776
+DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration characters -> org.hibernate.type.CharArrayType@458342d3
+DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration char[] -> org.hibernate.type.CharArrayType@458342d3
+DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration [C -> org.hibernate.type.CharArrayType@458342d3
+DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration wrapper-characters -> org.hibernate.type.CharacterArrayType@36676c1a
+DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration [Ljava.lang.Character; -> org.hibernate.type.CharacterArrayType@36676c1a
+DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration Character[] -> org.hibernate.type.CharacterArrayType@36676c1a
+DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration text -> org.hibernate.type.TextType@293d0107
+DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration ntext -> org.hibernate.type.NTextType@55e8ec2f
+DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration blob -> org.hibernate.type.BlobType@58e6d4b8
+DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration java.sql.Blob -> org.hibernate.type.BlobType@58e6d4b8
+DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration materialized_blob -> org.hibernate.type.MaterializedBlobType@6ca0256d
+DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration clob -> org.hibernate.type.ClobType@65aa6596
+DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration java.sql.Clob -> org.hibernate.type.ClobType@65aa6596
+DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration nclob -> org.hibernate.type.NClobType@1cd201a8
+DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration java.sql.NClob -> org.hibernate.type.NClobType@1cd201a8
+DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration materialized_clob -> org.hibernate.type.MaterializedClobType@3276732
+DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration materialized_nclob -> org.hibernate.type.MaterializedNClobType@21d8bcbe
+DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration serializable -> org.hibernate.type.SerializableType@4ae33a11
+DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration object -> org.hibernate.type.ObjectType@267f474e
+DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration java.lang.Object -> org.hibernate.type.ObjectType@267f474e
+DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration imm_date -> org.hibernate.type.AdaptedImmutableType@3efe7086
+DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration imm_time -> org.hibernate.type.AdaptedImmutableType@675d8c96
+DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration imm_timestamp -> org.hibernate.type.AdaptedImmutableType@741b3bc3
+DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration imm_dbtimestamp -> org.hibernate.type.AdaptedImmutableType@2ed3b1f5
+DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration imm_calendar -> org.hibernate.type.AdaptedImmutableType@63648ee9
+DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration imm_calendar_date -> org.hibernate.type.AdaptedImmutableType@68d6972f
+DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration imm_binary -> org.hibernate.type.AdaptedImmutableType@45be7cd5
+DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration imm_serializable -> org.hibernate.type.AdaptedImmutableType@7651218e
 DEBUG main org.springframework.jdbc.datasource.DriverManagerDataSource - Creating new JDBC DriverManager Connection to [jdbc:oracle:thin:@localhost:1521:xe]
 DEBUG main org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator - Database ->
        name : Oracle
@@ -408,236 +550,3 @@ DEBUG main org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory -
 DEBUG main org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [sequence-identity] -> [org.hibernate.id.SequenceIdentityGenerator]
 DEBUG main org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [enhanced-sequence] -> [org.hibernate.id.enhanced.SequenceStyleGenerator]
 DEBUG main org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [enhanced-table] -> [org.hibernate.id.enhanced.TableGenerator]
-DEBUG main org.hibernate.boot.model.relational.Namespace - Created database namespace [logicalName=Name{catalog=null, schema=null}, physicalName=Name{catalog=null, schema=null}]
-DEBUG main org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: br.com.springmvc.model.Departamento
-DEBUG main org.hibernate.cfg.Ejb3Column - Binding column: Ejb3DiscriminatorColumn{logicalColumnName'DTYPE', discriminatorTypeName='string'}
-DEBUG main org.hibernate.cfg.annotations.EntityBinder - Import with entity name Departamento
-DEBUG main org.hibernate.cfg.annotations.EntityBinder - Bind entity br.com.springmvc.model.Departamento on table DEPARTAMENTO
-DEBUG main org.hibernate.cfg.Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(DEPARTAMENTO), mappingColumn=COD_DEPARTAMENTO, insertable=true, updatable=true, unique=false}
-DEBUG main org.hibernate.cfg.annotations.PropertyBinder - MetadataSourceProcessor property codDepartamento with lazy=false
-DEBUG main org.hibernate.cfg.AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [br.com.springmvc.model.Departamento:codDepartamento]
-DEBUG main org.hibernate.cfg.annotations.SimpleValueBinder - building SimpleValue for codDepartamento
-DEBUG main org.hibernate.cfg.annotations.PropertyBinder - Building property codDepartamento
-DEBUG main org.hibernate.cfg.Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(DEPARTAMENTO), mappingColumn=LOCALIZACAO_DEPARTAMENTO, insertable=true, updatable=true, unique=false}
-DEBUG main org.hibernate.cfg.annotations.PropertyBinder - MetadataSourceProcessor property localizacaoDepartamento with lazy=false
-DEBUG main org.hibernate.cfg.AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [br.com.springmvc.model.Departamento:localizacaoDepartamento]
-DEBUG main org.hibernate.cfg.annotations.SimpleValueBinder - building SimpleValue for localizacaoDepartamento
-DEBUG main org.hibernate.cfg.annotations.PropertyBinder - Building property localizacaoDepartamento
-DEBUG main org.hibernate.cfg.Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(DEPARTAMENTO), mappingColumn=NOME_DEPARTAMENTO, insertable=true, updatable=true, unique=false}
-DEBUG main org.hibernate.cfg.annotations.PropertyBinder - MetadataSourceProcessor property nomeDepartamento with lazy=false
-DEBUG main org.hibernate.cfg.AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [br.com.springmvc.model.Departamento:nomeDepartamento]
-DEBUG main org.hibernate.cfg.annotations.SimpleValueBinder - building SimpleValue for nomeDepartamento
-DEBUG main org.hibernate.cfg.annotations.PropertyBinder - Building property nomeDepartamento
-DEBUG main org.hibernate.cfg.annotations.SimpleValueBinder - Starting fillSimpleValue for codDepartamento
-DEBUG main org.hibernate.cfg.annotations.SimpleValueBinder - Starting fillSimpleValue for localizacaoDepartamento
-DEBUG main org.hibernate.cfg.annotations.SimpleValueBinder - Starting fillSimpleValue for nomeDepartamento
-DEBUG main org.hibernate.mapping.PrimaryKey - Forcing column [cod_departamento] to be non-null as it is part of the primary key for table [departamento]
-DEBUG main org.hibernate.internal.SessionFactoryImpl - Building session factory
-DEBUG main org.hibernate.cfg.Settings - SessionFactory name : null
-DEBUG main org.hibernate.cfg.Settings - Automatic flush during beforeCompletion(): enabled
-DEBUG main org.hibernate.cfg.Settings - Automatic session close at end of transaction: disabled
-DEBUG main org.hibernate.cfg.Settings - Statistics: disabled
-DEBUG main org.hibernate.cfg.Settings - Deleted entity synthetic identifier rollback: disabled
-DEBUG main org.hibernate.cfg.Settings - Default entity-mode: pojo
-DEBUG main org.hibernate.cfg.Settings - Check Nullability in Core (should be disabled when Bean Validation is on): enabled
-DEBUG main org.hibernate.cfg.Settings - Allow initialization of lazy state outside session : disabled
-DEBUG main org.hibernate.cfg.Settings - Using BatchFetchStyle : LEGACY
-DEBUG main org.hibernate.cfg.Settings - Default batch fetch size: -1
-DEBUG main org.hibernate.cfg.Settings - Maximum outer join fetch depth: null
-DEBUG main org.hibernate.cfg.Settings - Default null ordering: NONE
-DEBUG main org.hibernate.cfg.Settings - Order SQL updates by primary key: disabled
-DEBUG main org.hibernate.cfg.Settings - Order SQL inserts for batching: disabled
-DEBUG main org.hibernate.cfg.Settings - multi-tenancy strategy : NONE
-DEBUG main org.hibernate.cfg.Settings - JTA Track by Thread: enabled
-DEBUG main org.hibernate.cfg.Settings - Query language substitutions: {}
-DEBUG main org.hibernate.cfg.Settings - JPA query language strict compliance: disabled
-DEBUG main org.hibernate.cfg.Settings - Named query checking : enabled
-DEBUG main org.hibernate.cfg.Settings - Second-level cache: enabled
-DEBUG main org.hibernate.cfg.Settings - Second-level query cache: disabled
-DEBUG main org.hibernate.cfg.Settings - Second-level query cache factory: org.hibernate.cache.internal.StandardQueryCacheFactory@2e140e59
-DEBUG main org.hibernate.cfg.Settings - Second-level cache region prefix: null
-DEBUG main org.hibernate.cfg.Settings - Optimize second-level cache for minimal puts: disabled
-DEBUG main org.hibernate.cfg.Settings - Structured second-level cache entries: disabled
-DEBUG main org.hibernate.cfg.Settings - Second-level cache direct-reference entries: disabled
-DEBUG main org.hibernate.cfg.Settings - Automatic eviction of collection cache: disabled
-DEBUG main org.hibernate.cfg.Settings - JDBC batch size: 15
-DEBUG main org.hibernate.cfg.Settings - JDBC batch updates for versioned data: disabled
-DEBUG main org.hibernate.cfg.Settings - Scrollable result sets: enabled
-DEBUG main org.hibernate.cfg.Settings - Wrap result sets: disabled
-DEBUG main org.hibernate.cfg.Settings - JDBC3 getGeneratedKeys(): disabled
-DEBUG main org.hibernate.cfg.Settings - JDBC result set fetch size: null
-DEBUG main org.hibernate.cfg.Settings - Connection release mode: ON_CLOSE
-DEBUG main org.hibernate.cfg.Settings - Generate SQL with comments: disabled
-DEBUG main org.hibernate.internal.SessionFactoryImpl - Session factory constructed with filter configurations : {}
-DEBUG main org.hibernate.internal.SessionFactoryImpl - Instantiating session factory with properties: {sun.desktop=windows, hibernate.format_sql=true, awt.toolkit=sun.awt.windows.WToolkit, file.encoding.pkg=sun.io, java.specification.version=1.8, hibernate.connection.handling_mode=DELAYED_ACQUISITION_AND_HOLD, sun.cpu.isalist=amd64, sun.jnu.encoding=Cp1252, hibernate.dialect=org.hibernate.dialect.Oracle10gDialect, java.class.path=C:\Program Files\Java\jre1.8.0_73\lib\resources.jar;C:\Program Files\Java\jre1.8.0_73\lib\rt.jar;C:\Program Files\Java\jre1.8.0_73\lib\jsse.jar;C:\Program Files\Java\jre1.8.0_73\lib\jce.jar;C:\Program Files\Java\jre1.8.0_73\lib\charsets.jar;C:\Program Files\Java\jre1.8.0_73\lib\jfr.jar;C:\Program Files\Java\jre1.8.0_73\lib\ext\access-bridge-64.jar;C:\Program Files\Java\jre1.8.0_73\lib\ext\cldrdata.jar;C:\Program Files\Java\jre1.8.0_73\lib\ext\dnsns.jar;C:\Program Files\Java\jre1.8.0_73\lib\ext\jaccess.jar;C:\Program Files\Java\jre1.8.0_73\lib\ext\jfxrt.jar;C:\Program Files\Java\jre1.8.0_73\lib\ext\localedata.jar;C:\Program Files\Java\jre1.8.0_73\lib\ext\nashorn.jar;C:\Program Files\Java\jre1.8.0_73\lib\ext\sunec.jar;C:\Program Files\Java\jre1.8.0_73\lib\ext\sunjce_provider.jar;C:\Program Files\Java\jre1.8.0_73\lib\ext\sunmscapi.jar;C:\Program Files\Java\jre1.8.0_73\lib\ext\sunpkcs11.jar;C:\Program Files\Java\jre1.8.0_73\lib\ext\zipfs.jar;D:\backup(D)\Eclipse Oxygen\eclipse\workspace\springmvcweb\target\classes;D:\backup(D)\Eclipse Oxygen\eclipse\workspace\springmvccore\target\classes;D:\backup(D)\Eclipse Oxygen\eclipse\workspace\springmvcdao\target\classes;D:\mavenRepository\com\sun\jersey\jersey-client\1.19.4\jersey-client-1.19.4.jar;D:\mavenRepository\com\sun\jersey\jersey-server\1.19.4\jersey-server-1.19.4.jar;D:\mavenRepository\com\sun\jersey\jersey-core\1.19.4\jersey-core-1.19.4.jar;D:\mavenRepository\javax\ws\rs\jsr311-api\1.1.1\jsr311-api-1.1.1.jar;D:\mavenRepository\com\sun\jersey\jersey-json\1.19.4\jersey-json-1.19.4.jar;D:\mavenRepository\org\codehaus\jettison\jettison\1.1\jettison-1.1.jar;D:\mavenRepository\com\sun\xml\bind\jaxb-impl\2.2.3-1\jaxb-impl-2.2.3-1.jar;D:\mavenRepository\javax\xml\bind\jaxb-api\2.2.2\jaxb-api-2.2.2.jar;D:\mavenRepository\javax\xml\stream\stax-api\1.0-2\stax-api-1.0-2.jar;D:\mavenRepository\javax\activation\activation\1.1\activation-1.1.jar;D:\mavenRepository\org\codehaus\jackson\jackson-core-asl\1.9.2\jackson-core-asl-1.9.2.jar;D:\mavenRepository\org\codehaus\jackson\jackson-mapper-asl\1.9.2\jackson-mapper-asl-1.9.2.jar;D:\mavenRepository\org\codehaus\jackson\jackson-jaxrs\1.9.2\jackson-jaxrs-1.9.2.jar;D:\mavenRepository\org\codehaus\jackson\jackson-xc\1.9.2\jackson-xc-1.9.2.jar;D:\mavenRepository\com\sun\jersey\contribs\jersey-multipart\1.19.4\jersey-multipart-1.19.4.jar;D:\mavenRepository\org\jvnet\mimepull\mimepull\1.9.3\mimepull-1.9.3.jar;D:\mavenRepository\com\sun\jersey\jersey-servlet\1.19.4\jersey-servlet-1.19.4.jar;D:\mavenRepository\net\bytebuddy\byte-buddy\1.7.9\byte-buddy-1.7.9.jar;D:\mavenRepository\javax\servlet\javax.servlet-api\3.1.0\javax.servlet-api-3.1.0.jar;D:\mavenRepository\log4j\log4j\1.2.17\log4j-1.2.17.jar;D:\mavenRepository\org\springframework\spring-webmvc\4.3.7.RELEASE\spring-webmvc-4.3.7.RELEASE.jar;D:\mavenRepository\org\springframework\spring-beans\4.3.7.RELEASE\spring-beans-4.3.7.RELEASE.jar;D:\mavenRepository\org\springframework\spring-core\4.3.7.RELEASE\spring-core-4.3.7.RELEASE.jar;D:\mavenRepository\commons-logging\commons-logging\1.2\commons-logging-1.2.jar;D:\mavenRepository\org\springframework\spring-expression\4.3.7.RELEASE\spring-expression-4.3.7.RELEASE.jar;D:\mavenRepository\org\springframework\spring-web\4.3.7.RELEASE\spring-web-4.3.7.RELEASE.jar;D:\mavenRepository\org\springframework\spring-context\4.3.7.RELEASE\spring-context-4.3.7.RELEASE.jar;D:\mavenRepository\org\springframework\spring-jdbc\4.3.7.RELEASE\spring-jdbc-4.3.7.RELEASE.jar;D:\mavenRepository\org\springframework\spring-tx\4.3.7.RELEASE\spring-tx-4.3.7.RELEASE.jar;D:\mavenRepository\org\springframework\spring-orm\4.3.7.RELEASE\spring-orm-4.3.7.RELEASE.jar;D:\mavenRepository\org\springframework\spring-aop\4.3.7.RELEASE\spring-aop-4.3.7.RELEASE.jar;D:\mavenRepository\org\springframework\data\spring-data-jpa\2.0.1.RELEASE\spring-data-jpa-2.0.1.RELEASE.jar;D:\mavenRepository\org\springframework\data\spring-data-commons\2.0.1.RELEASE\spring-data-commons-2.0.1.RELEASE.jar;D:\mavenRepository\org\aspectj\aspectjrt\1.8.12\aspectjrt-1.8.12.jar;D:\mavenRepository\org\slf4j\slf4j-api\1.7.25\slf4j-api-1.7.25.jar;D:\mavenRepository\com\mchange\c3p0\0.9.2.1\c3p0-0.9.2.1.jar;D:\mavenRepository\com\mchange\mchange-commons-java\0.2.3.4\mchange-commons-java-0.2.3.4.jar;D:\mavenRepository\org\hibernate\hibernate-core\5.2.10.Final\hibernate-core-5.2.10.Final.jar;D:\mavenRepository\org\jboss\logging\jboss-logging\3.3.0.Final\jboss-logging-3.3.0.Final.jar;D:\mavenRepository\org\javassist\javassist\3.20.0-GA\javassist-3.20.0-GA.jar;D:\mavenRepository\antlr\antlr\2.7.7\antlr-2.7.7.jar;D:\mavenRepository\org\jboss\spec\javax\transaction\jboss-transaction-api_1.2_spec\1.0.1.Final\jboss-transaction-api_1.2_spec-1.0.1.Final.jar;D:\mavenRepository\org\jboss\jandex\2.0.3.Final\jandex-2.0.3.Final.jar;D:\mavenRepository\com\fasterxml\classmate\1.3.0\classmate-1.3.0.jar;D:\mavenRepository\dom4j\dom4j\1.6.1\dom4j-1.6.1.jar;D:\mavenRepository\org\hibernate\common\hibernate-commons-annotations\5.0.1.Final\hibernate-commons-annotations-5.0.1.Final.jar;D:\mavenRepository\org\hibernate\hibernate-entitymanager\5.2.10.Final\hibernate-entitymanager-5.2.10.Final.jar;D:\mavenRepository\org\hibernate\hibernate-validator\5.1.3.Final\hibernate-validator-5.1.3.Final.jar;D:\mavenRepository\javax\validation\validation-api\1.1.0.Final\validation-api-1.1.0.Final.jar;D:\mavenRepository\org\hibernate\javax\persistence\hibernate-jpa-2.1-api\1.0.0.Final\hibernate-jpa-2.1-api-1.0.0.Final.jar;D:\mavenRepository\ojdbc\ojdbc\14-10gR3\ojdbc-14-10gR3.jar, java.vm.vendor=Oracle Corporation, sun.arch.data.model=64, user.variant=, java.vendor.url=http://java.oracle.com/, user.timezone=GMT-03:00, os.name=Windows 8, java.vm.specification.version=1.8, user.country=BR, sun.java.launcher=SUN_STANDARD, sun.boot.library.path=C:\Program Files\Java\jre1.8.0_73\bin, sun.java.command=br.com.springmvc.controller.DepartamentoController, sun.cpu.endian=little, user.home=C:\Users\THIAGO MAIA, user.language=pt, java.specification.vendor=Oracle Corporation, java.home=C:\Program Files\Java\jre1.8.0_73, file.separator=\, line.separator=
-, java.vm.specification.vendor=Oracle Corporation, java.specification.name=Java Platform API Specification, java.awt.graphicsenv=sun.awt.Win32GraphicsEnvironment, sun.boot.class.path=C:\Program Files\Java\jre1.8.0_73\lib\resources.jar;C:\Program Files\Java\jre1.8.0_73\lib\rt.jar;C:\Program Files\Java\jre1.8.0_73\lib\sunrsasign.jar;C:\Program Files\Java\jre1.8.0_73\lib\jsse.jar;C:\Program Files\Java\jre1.8.0_73\lib\jce.jar;C:\Program Files\Java\jre1.8.0_73\lib\charsets.jar;C:\Program Files\Java\jre1.8.0_73\lib\jfr.jar;C:\Program Files\Java\jre1.8.0_73\classes, user.script=, sun.management.compiler=HotSpot 64-Bit Tiered Compilers, java.runtime.version=1.8.0_73-b02, user.name=THIAGO MAIA, path.separator=;, os.version=6.2, java.endorsed.dirs=C:\Program Files\Java\jre1.8.0_73\lib\endorsed, java.runtime.name=Java(TM) SE Runtime Environment, file.encoding=Cp1252, java.vm.name=Java HotSpot(TM) 64-Bit Server VM, hibernate.show_sql=true, hibernate.classLoaders=[sun.misc.Launcher$AppClassLoader@14dad5dc], hibernate.current_session_context_class=org.springframework.orm.hibernate5.SpringSessionContext, java.vendor.url.bug=http://bugreport.sun.com/bugreport/, java.io.tmpdir=C:\Users\THIAGO~1\AppData\Local\Temp\, java.version=1.8.0_73, user.dir=D:\backup(D)\Eclipse Oxygen\eclipse\workspace\springmvcweb, os.arch=amd64, java.vm.specification.name=Java Virtual Machine Specification, java.awt.printerjob=sun.awt.windows.WPrinterJob, sun.os.patch.level=, hibernate.boot.CfgXmlAccessService.key=org.hibernate.boot.cfgxml.spi.LoadedConfig@ab20d7c, java.library.path=C:\Program Files\Java\jre1.8.0_73\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:/Program Files/Java/jre1.8.0_73/bin/server;C:/Program Files/Java/jre1.8.0_73/bin;C:/Program Files/Java/jre1.8.0_73/lib/amd64;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\VDownloader\;C:\Users\THIAGO MAIA\AppData\Local\Smartbar\Application\;C:\Program Files (x86)\Internet Explorer;C:\Users\THIAGO MAIA\AppData\Local\Smartbar\Application\;C:\Program Files (x86)\Windows Live\Shared;C:\Program Files\Maven\apache-maven-3.2.1\bin;C:\Program Files\Git\cmd;C:\Program Files\nodejs;C:\Program Files\Java\jdk1.8.0_73\bin;C:\Program Files\Heroku\bin;C:\Users\THIAGO MAIA\AppData\Roaming\npm;C:\Program Files\Microsoft VS Code\bin;D:\backup(D)\Eclipse Oxygen\eclipse;;., java.vm.info=mixed mode, java.vendor=Oracle Corporation, java.vm.version=25.73-b02, hibernate.bytecode.use_reflection_optimizer=false, hibernate.connection.datasource=org.springframework.jdbc.datasource.DriverManagerDataSource@f627d13, java.ext.dirs=C:\Program Files\Java\jre1.8.0_73\lib\ext;C:\Windows\Sun\Java\lib\ext, sun.io.unicode.encoding=UnicodeLittle, java.class.version=52.0}
-INFO main org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 5.1.3.Final
-DEBUG main org.hibernate.validator.internal.engine.resolver.DefaultTraversableResolver - Found javax.persistence.Persistence on classpath containing 'getPersistenceUtil'. Assuming JPA 2 environment. Trying to instantiate JPA aware TraversableResolver
-DEBUG main org.hibernate.validator.internal.engine.resolver.DefaultTraversableResolver - Instantiated JPA aware TraversableResolver of type org.hibernate.validator.internal.engine.resolver.JPATraversableResolver.
-DEBUG main org.hibernate.cfg.beanvalidation.TypeSafeActivator - Unable to acquire Bean Validation ValidatorFactory, skipping activation
-DEBUG main org.hibernate.secure.spi.JaccIntegrator - Skipping JACC integration as it was not enabled
-DEBUG main org.hibernate.internal.SessionFactoryImpl - Instantiated session factory
-DEBUG main org.hibernate.boot.internal.ClassLoaderAccessImpl - Not known whether passed class name [br.com.springmvc.model.Departamento] is safe
-DEBUG main org.hibernate.boot.internal.ClassLoaderAccessImpl - No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : br.com.springmvc.model.Departamento
-DEBUG main org.hibernate.boot.internal.ClassLoaderAccessImpl - Not known whether passed class name [br.com.springmvc.model.Departamento] is safe
-DEBUG main org.hibernate.boot.internal.ClassLoaderAccessImpl - No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : br.com.springmvc.model.Departamento
-DEBUG main org.hibernate.persister.entity.AbstractEntityPersister - Static SQL for entity: br.com.springmvc.model.Departamento
-DEBUG main org.hibernate.persister.entity.AbstractEntityPersister -  Version select: select COD_DEPARTAMENTO from DEPARTAMENTO where COD_DEPARTAMENTO =?
-DEBUG main org.hibernate.persister.entity.AbstractEntityPersister -  Snapshot select: select departamen_.COD_DEPARTAMENTO, departamen_.LOCALIZACAO_DEPARTAMENTO as LOCALIZACAO_DEPART2_0_, departamen_.NOME_DEPARTAMENTO as NOME_DEPARTAMENTO3_0_ from DEPARTAMENTO departamen_ where departamen_.COD_DEPARTAMENTO=?
-DEBUG main org.hibernate.persister.entity.AbstractEntityPersister -  Insert 0: insert into DEPARTAMENTO (LOCALIZACAO_DEPARTAMENTO, NOME_DEPARTAMENTO, COD_DEPARTAMENTO) values (?, ?, ?)
-DEBUG main org.hibernate.persister.entity.AbstractEntityPersister -  Update 0: update DEPARTAMENTO set LOCALIZACAO_DEPARTAMENTO=?, NOME_DEPARTAMENTO=? where COD_DEPARTAMENTO=?
-DEBUG main org.hibernate.persister.entity.AbstractEntityPersister -  Delete 0: delete from DEPARTAMENTO where COD_DEPARTAMENTO=?
-DEBUG main org.hibernate.loader.plan.build.internal.spaces.QuerySpacesImpl - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@119c745c]
-DEBUG main org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : localizacaoDepartamento
-DEBUG main org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : nomeDepartamento
-DEBUG main org.hibernate.loader.plan.build.internal.FetchStyleLoadPlanBuildingAssociationVisitationStrategy - Building LoadPlan...
-DEBUG main org.hibernate.loader.plan.exec.internal.LoadQueryJoinAndFetchProcessor - processing queryspace <gen:0>
-DEBUG main org.hibernate.loader.plan.build.spi.LoadPlanTreePrinter - LoadPlan(entity=br.com.springmvc.model.Departamento)
-    - Returns
-       - EntityReturnImpl(entity=br.com.springmvc.model.Departamento, querySpaceUid=<gen:0>, path=br.com.springmvc.model.Departamento)
-    - QuerySpaces
-       - EntityQuerySpaceImpl(uid=<gen:0>, entity=br.com.springmvc.model.Departamento)
-          - SQL table alias mapping - departamen0_
-          - alias suffix - 0_
-          - suffixed key columns - {COD_DEPARTAMENTO1_0_0_}
-
-DEBUG main org.hibernate.loader.entity.plan.EntityLoader - Static select for entity br.com.springmvc.model.Departamento [NONE]: select departamen0_.COD_DEPARTAMENTO as COD_DEPARTAMENTO1_0_0_, departamen0_.LOCALIZACAO_DEPARTAMENTO as LOCALIZACAO_DEPART2_0_0_, departamen0_.NOME_DEPARTAMENTO as NOME_DEPARTAMENTO3_0_0_ from DEPARTAMENTO departamen0_ where departamen0_.COD_DEPARTAMENTO=?
-DEBUG main org.hibernate.loader.plan.build.internal.spaces.QuerySpacesImpl - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@51841ac6]
-DEBUG main org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : localizacaoDepartamento
-DEBUG main org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : nomeDepartamento
-DEBUG main org.hibernate.loader.plan.build.internal.FetchStyleLoadPlanBuildingAssociationVisitationStrategy - Building LoadPlan...
-DEBUG main org.hibernate.loader.plan.exec.internal.LoadQueryJoinAndFetchProcessor - processing queryspace <gen:0>
-DEBUG main org.hibernate.loader.plan.build.spi.LoadPlanTreePrinter - LoadPlan(entity=br.com.springmvc.model.Departamento)
-    - Returns
-       - EntityReturnImpl(entity=br.com.springmvc.model.Departamento, querySpaceUid=<gen:0>, path=br.com.springmvc.model.Departamento)
-    - QuerySpaces
-       - EntityQuerySpaceImpl(uid=<gen:0>, entity=br.com.springmvc.model.Departamento)
-          - SQL table alias mapping - departamen0_
-          - alias suffix - 0_
-          - suffixed key columns - {COD_DEPARTAMENTO1_0_0_}
-
-DEBUG main org.hibernate.loader.entity.plan.EntityLoader - Static select for entity br.com.springmvc.model.Departamento [READ]: select departamen0_.COD_DEPARTAMENTO as COD_DEPARTAMENTO1_0_0_, departamen0_.LOCALIZACAO_DEPARTAMENTO as LOCALIZACAO_DEPART2_0_0_, departamen0_.NOME_DEPARTAMENTO as NOME_DEPARTAMENTO3_0_0_ from DEPARTAMENTO departamen0_ where departamen0_.COD_DEPARTAMENTO=?
-DEBUG main org.hibernate.loader.plan.build.internal.spaces.QuerySpacesImpl - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@435e60ff]
-DEBUG main org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : localizacaoDepartamento
-DEBUG main org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : nomeDepartamento
-DEBUG main org.hibernate.loader.plan.build.internal.FetchStyleLoadPlanBuildingAssociationVisitationStrategy - Building LoadPlan...
-DEBUG main org.hibernate.loader.plan.exec.internal.LoadQueryJoinAndFetchProcessor - processing queryspace <gen:0>
-DEBUG main org.hibernate.loader.plan.build.spi.LoadPlanTreePrinter - LoadPlan(entity=br.com.springmvc.model.Departamento)
-    - Returns
-       - EntityReturnImpl(entity=br.com.springmvc.model.Departamento, querySpaceUid=<gen:0>, path=br.com.springmvc.model.Departamento)
-    - QuerySpaces
-       - EntityQuerySpaceImpl(uid=<gen:0>, entity=br.com.springmvc.model.Departamento)
-          - SQL table alias mapping - departamen0_
-          - alias suffix - 0_
-          - suffixed key columns - {COD_DEPARTAMENTO1_0_0_}
-
-DEBUG main org.hibernate.loader.entity.plan.EntityLoader - Static select for entity br.com.springmvc.model.Departamento [UPGRADE]: select departamen0_.COD_DEPARTAMENTO as COD_DEPARTAMENTO1_0_0_, departamen0_.LOCALIZACAO_DEPARTAMENTO as LOCALIZACAO_DEPART2_0_0_, departamen0_.NOME_DEPARTAMENTO as NOME_DEPARTAMENTO3_0_0_ from DEPARTAMENTO departamen0_ where departamen0_.COD_DEPARTAMENTO=? for update
-DEBUG main org.hibernate.loader.plan.build.internal.spaces.QuerySpacesImpl - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@66f0548d]
-DEBUG main org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : localizacaoDepartamento
-DEBUG main org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : nomeDepartamento
-DEBUG main org.hibernate.loader.plan.build.internal.FetchStyleLoadPlanBuildingAssociationVisitationStrategy - Building LoadPlan...
-DEBUG main org.hibernate.loader.plan.exec.internal.LoadQueryJoinAndFetchProcessor - processing queryspace <gen:0>
-DEBUG main org.hibernate.loader.plan.build.spi.LoadPlanTreePrinter - LoadPlan(entity=br.com.springmvc.model.Departamento)
-    - Returns
-       - EntityReturnImpl(entity=br.com.springmvc.model.Departamento, querySpaceUid=<gen:0>, path=br.com.springmvc.model.Departamento)
-    - QuerySpaces
-       - EntityQuerySpaceImpl(uid=<gen:0>, entity=br.com.springmvc.model.Departamento)
-          - SQL table alias mapping - departamen0_
-          - alias suffix - 0_
-          - suffixed key columns - {COD_DEPARTAMENTO1_0_0_}
-
-DEBUG main org.hibernate.loader.entity.plan.EntityLoader - Static select for entity br.com.springmvc.model.Departamento [UPGRADE_NOWAIT]: select departamen0_.COD_DEPARTAMENTO as COD_DEPARTAMENTO1_0_0_, departamen0_.LOCALIZACAO_DEPARTAMENTO as LOCALIZACAO_DEPART2_0_0_, departamen0_.NOME_DEPARTAMENTO as NOME_DEPARTAMENTO3_0_0_ from DEPARTAMENTO departamen0_ where departamen0_.COD_DEPARTAMENTO=? for update nowait
-DEBUG main org.hibernate.loader.plan.build.internal.spaces.QuerySpacesImpl - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@1e86a5a7]
-DEBUG main org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : localizacaoDepartamento
-DEBUG main org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : nomeDepartamento
-DEBUG main org.hibernate.loader.plan.build.internal.FetchStyleLoadPlanBuildingAssociationVisitationStrategy - Building LoadPlan...
-DEBUG main org.hibernate.loader.plan.exec.internal.LoadQueryJoinAndFetchProcessor - processing queryspace <gen:0>
-DEBUG main org.hibernate.loader.plan.build.spi.LoadPlanTreePrinter - LoadPlan(entity=br.com.springmvc.model.Departamento)
-    - Returns
-       - EntityReturnImpl(entity=br.com.springmvc.model.Departamento, querySpaceUid=<gen:0>, path=br.com.springmvc.model.Departamento)
-    - QuerySpaces
-       - EntityQuerySpaceImpl(uid=<gen:0>, entity=br.com.springmvc.model.Departamento)
-          - SQL table alias mapping - departamen0_
-          - alias suffix - 0_
-          - suffixed key columns - {COD_DEPARTAMENTO1_0_0_}
-
-DEBUG main org.hibernate.loader.entity.plan.EntityLoader - Static select for entity br.com.springmvc.model.Departamento [UPGRADE_SKIPLOCKED]: select departamen0_.COD_DEPARTAMENTO as COD_DEPARTAMENTO1_0_0_, departamen0_.LOCALIZACAO_DEPARTAMENTO as LOCALIZACAO_DEPART2_0_0_, departamen0_.NOME_DEPARTAMENTO as NOME_DEPARTAMENTO3_0_0_ from DEPARTAMENTO departamen0_ where departamen0_.COD_DEPARTAMENTO=? for update skip locked
-DEBUG main org.hibernate.loader.plan.build.internal.spaces.QuerySpacesImpl - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@741f8dbe]
-DEBUG main org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : localizacaoDepartamento
-DEBUG main org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : nomeDepartamento
-DEBUG main org.hibernate.loader.plan.build.internal.FetchStyleLoadPlanBuildingAssociationVisitationStrategy - Building LoadPlan...
-DEBUG main org.hibernate.loader.plan.exec.internal.LoadQueryJoinAndFetchProcessor - processing queryspace <gen:0>
-DEBUG main org.hibernate.loader.plan.build.spi.LoadPlanTreePrinter - LoadPlan(entity=br.com.springmvc.model.Departamento)
-    - Returns
-       - EntityReturnImpl(entity=br.com.springmvc.model.Departamento, querySpaceUid=<gen:0>, path=br.com.springmvc.model.Departamento)
-    - QuerySpaces
-       - EntityQuerySpaceImpl(uid=<gen:0>, entity=br.com.springmvc.model.Departamento)
-          - SQL table alias mapping - departamen0_
-          - alias suffix - 0_
-          - suffixed key columns - {COD_DEPARTAMENTO1_0_0_}
-
-DEBUG main org.hibernate.loader.entity.plan.EntityLoader - Static select for entity br.com.springmvc.model.Departamento [FORCE]: select departamen0_.COD_DEPARTAMENTO as COD_DEPARTAMENTO1_0_0_, departamen0_.LOCALIZACAO_DEPARTAMENTO as LOCALIZACAO_DEPART2_0_0_, departamen0_.NOME_DEPARTAMENTO as NOME_DEPARTAMENTO3_0_0_ from DEPARTAMENTO departamen0_ where departamen0_.COD_DEPARTAMENTO=? for update nowait
-DEBUG main org.hibernate.loader.plan.build.internal.spaces.QuerySpacesImpl - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@a2ddf26]
-DEBUG main org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : localizacaoDepartamento
-DEBUG main org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : nomeDepartamento
-DEBUG main org.hibernate.loader.plan.build.internal.FetchStyleLoadPlanBuildingAssociationVisitationStrategy - Building LoadPlan...
-DEBUG main org.hibernate.loader.plan.exec.internal.LoadQueryJoinAndFetchProcessor - processing queryspace <gen:0>
-DEBUG main org.hibernate.loader.plan.build.spi.LoadPlanTreePrinter - LoadPlan(entity=br.com.springmvc.model.Departamento)
-    - Returns
-       - EntityReturnImpl(entity=br.com.springmvc.model.Departamento, querySpaceUid=<gen:0>, path=br.com.springmvc.model.Departamento)
-    - QuerySpaces
-       - EntityQuerySpaceImpl(uid=<gen:0>, entity=br.com.springmvc.model.Departamento)
-          - SQL table alias mapping - departamen0_
-          - alias suffix - 0_
-          - suffixed key columns - {COD_DEPARTAMENTO1_0_0_}
-
-DEBUG main org.hibernate.loader.entity.plan.EntityLoader - Static select for entity br.com.springmvc.model.Departamento [PESSIMISTIC_READ]: select departamen0_.COD_DEPARTAMENTO as COD_DEPARTAMENTO1_0_0_, departamen0_.LOCALIZACAO_DEPARTAMENTO as LOCALIZACAO_DEPART2_0_0_, departamen0_.NOME_DEPARTAMENTO as NOME_DEPARTAMENTO3_0_0_ from DEPARTAMENTO departamen0_ where departamen0_.COD_DEPARTAMENTO=? for update
-DEBUG main org.hibernate.loader.plan.build.internal.spaces.QuerySpacesImpl - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@6daf7d37]
-DEBUG main org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : localizacaoDepartamento
-DEBUG main org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : nomeDepartamento
-DEBUG main org.hibernate.loader.plan.build.internal.FetchStyleLoadPlanBuildingAssociationVisitationStrategy - Building LoadPlan...
-DEBUG main org.hibernate.loader.plan.exec.internal.LoadQueryJoinAndFetchProcessor - processing queryspace <gen:0>
-DEBUG main org.hibernate.loader.plan.build.spi.LoadPlanTreePrinter - LoadPlan(entity=br.com.springmvc.model.Departamento)
-    - Returns
-       - EntityReturnImpl(entity=br.com.springmvc.model.Departamento, querySpaceUid=<gen:0>, path=br.com.springmvc.model.Departamento)
-    - QuerySpaces
-       - EntityQuerySpaceImpl(uid=<gen:0>, entity=br.com.springmvc.model.Departamento)
-          - SQL table alias mapping - departamen0_
-          - alias suffix - 0_
-          - suffixed key columns - {COD_DEPARTAMENTO1_0_0_}
-
-DEBUG main org.hibernate.loader.entity.plan.EntityLoader - Static select for entity br.com.springmvc.model.Departamento [PESSIMISTIC_WRITE]: select departamen0_.COD_DEPARTAMENTO as COD_DEPARTAMENTO1_0_0_, departamen0_.LOCALIZACAO_DEPARTAMENTO as LOCALIZACAO_DEPART2_0_0_, departamen0_.NOME_DEPARTAMENTO as NOME_DEPARTAMENTO3_0_0_ from DEPARTAMENTO departamen0_ where departamen0_.COD_DEPARTAMENTO=? for update
-DEBUG main org.hibernate.loader.plan.build.internal.spaces.QuerySpacesImpl - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@4715ae33]
-DEBUG main org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : localizacaoDepartamento
-DEBUG main org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : nomeDepartamento
-DEBUG main org.hibernate.loader.plan.build.internal.FetchStyleLoadPlanBuildingAssociationVisitationStrategy - Building LoadPlan...
-DEBUG main org.hibernate.loader.plan.exec.internal.LoadQueryJoinAndFetchProcessor - processing queryspace <gen:0>
-DEBUG main org.hibernate.loader.plan.build.spi.LoadPlanTreePrinter - LoadPlan(entity=br.com.springmvc.model.Departamento)
-    - Returns
-       - EntityReturnImpl(entity=br.com.springmvc.model.Departamento, querySpaceUid=<gen:0>, path=br.com.springmvc.model.Departamento)
-    - QuerySpaces
-       - EntityQuerySpaceImpl(uid=<gen:0>, entity=br.com.springmvc.model.Departamento)
-          - SQL table alias mapping - departamen0_
-          - alias suffix - 0_
-          - suffixed key columns - {COD_DEPARTAMENTO1_0_0_}
-
-DEBUG main org.hibernate.loader.entity.plan.EntityLoader - Static select for entity br.com.springmvc.model.Departamento [PESSIMISTIC_FORCE_INCREMENT]: select departamen0_.COD_DEPARTAMENTO as COD_DEPARTAMENTO1_0_0_, departamen0_.LOCALIZACAO_DEPARTAMENTO as LOCALIZACAO_DEPART2_0_0_, departamen0_.NOME_DEPARTAMENTO as NOME_DEPARTAMENTO3_0_0_ from DEPARTAMENTO departamen0_ where departamen0_.COD_DEPARTAMENTO=? for update nowait
-DEBUG main org.hibernate.loader.plan.build.internal.spaces.QuerySpacesImpl - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@1fac1d5c]
-DEBUG main org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : localizacaoDepartamento
-DEBUG main org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : nomeDepartamento
-DEBUG main org.hibernate.loader.plan.build.internal.FetchStyleLoadPlanBuildingAssociationVisitationStrategy - Building LoadPlan...
-DEBUG main org.hibernate.loader.plan.exec.internal.LoadQueryJoinAndFetchProcessor - processing queryspace <gen:0>
-DEBUG main org.hibernate.loader.plan.build.spi.LoadPlanTreePrinter - LoadPlan(entity=br.com.springmvc.model.Departamento)
-    - Returns
-       - EntityReturnImpl(entity=br.com.springmvc.model.Departamento, querySpaceUid=<gen:0>, path=br.com.springmvc.model.Departamento)
-    - QuerySpaces
-       - EntityQuerySpaceImpl(uid=<gen:0>, entity=br.com.springmvc.model.Departamento)
-          - SQL table alias mapping - departamen0_
-          - alias suffix - 0_
-          - suffixed key columns - {COD_DEPARTAMENTO1_0_0_}
-
-DEBUG main org.hibernate.loader.entity.plan.EntityLoader - Static select for entity br.com.springmvc.model.Departamento [OPTIMISTIC]: select departamen0_.COD_DEPARTAMENTO as COD_DEPARTAMENTO1_0_0_, departamen0_.LOCALIZACAO_DEPARTAMENTO as LOCALIZACAO_DEPART2_0_0_, departamen0_.NOME_DEPARTAMENTO as NOME_DEPARTAMENTO3_0_0_ from DEPARTAMENTO departamen0_ where departamen0_.COD_DEPARTAMENTO=?
-DEBUG main org.hibernate.loader.plan.build.internal.spaces.QuerySpacesImpl - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@7a8406c2]
-DEBUG main org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : localizacaoDepartamento
-DEBUG main org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : nomeDepartamento
-DEBUG main org.hibernate.loader.plan.build.internal.FetchStyleLoadPlanBuildingAssociationVisitationStrategy - Building LoadPlan...

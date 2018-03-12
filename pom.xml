@@ -13,6 +13,8 @@
   
   <properties>
   	<jersey.version>1.19.4</jersey.version>
+  	<jackson.jaxrs.version>2.9.4</jackson.jaxrs.version>
+  	<jackson.databind.version>2.9.4</jackson.databind.version>
   </properties>
   
   <dependencies>
@@ -22,7 +24,14 @@
   		<artifactId>springmvccore</artifactId>
   		<version>0.0.1-SNAPSHOT</version>
   	</dependency>
-  	<!-- Jersey -->
+  	<!-- modulo dao -->
+  	<dependency>
+  		<groupId>br.com.springmvcapp</groupId>
+  		<artifactId>springmvcdao</artifactId>
+  		<version>0.0.1-SNAPSHOT</version>
+  	</dependency>
+  	<!-- Jersey -->  	
+  	<!--
 	<dependency>
 		<groupId>com.sun.jersey</groupId>
 		<artifactId>jersey-client</artifactId>
@@ -32,12 +41,7 @@
 		<groupId>com.sun.jersey</groupId>
 		<artifactId>jersey-server</artifactId>
 		<version>${jersey.version}</version>
-	</dependency>
-	<dependency>
-		<groupId>com.sun.jersey</groupId>
-		<artifactId>jersey-core</artifactId>
-		<version>${jersey.version}</version>
-	</dependency>
+	</dependency>	
 	<dependency>
 		<groupId>com.sun.jersey</groupId>
 		<artifactId>jersey-json</artifactId>
@@ -53,6 +57,27 @@
 		<artifactId>jersey-servlet</artifactId>
 		<version>${jersey.version}</version>
 	</dependency>
+	 <dependency>
+		<groupId>com.sun.jersey</groupId>
+		<artifactId>jersey-json</artifactId>
+		<version>${jersey.version}</version>
+	</dependency>
+	<dependency>
+    	<groupId>com.fasterxml.jackson.jaxrs</groupId>
+    	<artifactId>jackson-jaxrs-json-provider</artifactId>
+    	<version>${jackson.jaxrs.version}</version>
+	</dependency>
+	 -->
+	<dependency>
+		<groupId>com.sun.jersey</groupId>
+		<artifactId>jersey-core</artifactId>
+		<version>${jersey.version}</version>
+	</dependency>
+	<dependency>
+		<groupId>com.fasterxml.jackson.core</groupId>
+		<artifactId>jackson-databind</artifactId>
+		<version>${jackson.databind.version}</version>
+	</dependency>	
   </dependencies>
 
   <build>
@@ -65,16 +90,6 @@
 				<target>1.8</target>
 			</configuration>
 		</plugin>
-		
-		<!-- <plugin>
-        	<groupId>org.apache.tomcat.maven</groupId>
-        	<artifactId>tomcat7-maven-plugin</artifactId>
-        	<version>2.0</version>
-        	<configuration>
-          	<path>/</path>
-          	<port>8081</port>
-        	</configuration>
-        </plugin> -->
 	</plugins>
   </build>
   
